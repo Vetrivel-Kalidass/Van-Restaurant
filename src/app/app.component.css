@@ -1,0 +1,91 @@
+h1{
+    font-size: 5vw;
+    color: rgb(233, 42, 106);
+    text-align: center;
+}
+
+.head-bar{
+    position: fixed;
+    background-color: rgb(228, 187, 201);
+    height: 15vh;
+    top: 0px;
+    box-shadow: 0px 5px 5px 2px rgb(112, 105, 108);
+    z-index: 1;
+    flex: auto;
+}
+
+.head-bar button{
+    width: 5%;
+    height: 80%;
+    position: absolute;
+    right: 10px;
+}
+
+.heart
+{
+    width: 40px;
+    height: 40px;
+    background-color:  rgb(233, 42, 106);
+    margin: 20px;
+    transform: rotate(45deg);
+    animation-name: heartBeat;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+}
+
+.heart::before{
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: rgb(233, 42, 106);
+    position: absolute;
+    right: 20px;
+    border-radius: 50%;
+}
+
+.heart::after{
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: rgb(233, 42, 106);
+    position: absolute;
+    bottom: 20px;
+    border-radius: 50%;
+}
+
+
+
+.container{
+    max-width: 87%;
+    height: auto;
+    background-color: rgb(228, 187, 201);
+    margin: 17vh auto auto auto;
+    padding: 2%;
+}
+
+.card{
+    max-width: 70%;
+    height: auto;
+    margin: 1%;
+}
+
+@keyframes heartBeat{
+0% {
+    transform: scale(1) rotate(45deg);
+  }
+
+  45%{
+    transform: scale(1.3) rotate(45deg);
+  }
+50% {
+    transform: scale(1) rotate(45deg);
+  }
+  55%{
+    transform: scale(1.3) rotate(45deg);
+  }
+  60%{
+    transform: scale(1.3) rotate(45deg);
+
+  }
+
+}

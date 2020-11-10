@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+h3{
+    font-size: 2vw;
+    color: violet;
+    text-align: center;
+    margin-top: 30vh;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: monospace !important; }
