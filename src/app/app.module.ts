@@ -11,21 +11,26 @@ import { MenuComponent } from './menu/menu.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import { CardComponent } from './card/card.component';
-import { ListComponent } from './list/list.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
 import { AboutComponent } from './about/about.component';
 import { DishService } from './services/dish.service';
 import { LeaderService } from './shared/leader.service';
+import { PromotionService } from './services/promotion.service';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    CardComponent,
-    ListComponent,
     DishdetailComponent,
-    AboutComponent
+    AboutComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,7 @@ import { LeaderService } from './shared/leader.service';
     MatButtonModule,
     AppRoutingModule
   ],
-  providers: [DishService, LeaderService],
+  providers: [DishService, LeaderService, PromotionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
