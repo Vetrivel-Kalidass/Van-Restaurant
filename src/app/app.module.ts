@@ -22,6 +22,10 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -46,7 +50,12 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatCardModule,
     MatButtonModule,
     AppRoutingModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    MatInputModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
   ],
   entryComponents: [LoginComponent],
   providers: [DishService, LeaderService, PromotionService],
