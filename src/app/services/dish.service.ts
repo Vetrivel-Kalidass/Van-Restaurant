@@ -10,14 +10,20 @@ export class DishService {
 
   constructor() { }
 
-  getdish(): Dish[]{
-    return DISHES;
+  getdish(): Promise<Dish[]>{
+    return new Promise(resolve => {
+      setTimeout(()=>{ resolve(DISHES); }, 2000);
+    });
   }
-  getDish(id: string): Dish {
-    return DISHES.find((dish) => (dish.id == id));
+  getDish(id: string): Promise<Dish> {
+    return new Promise(resolve => {
+      setTimeout(()=>{ resolve(DISHES.find((dish) => (dish.id == id))); }, 2000);
+    });
   }
 
-  getFeaturedDish(): Dish {
-    return DISHES.filter((dish) => dish.featured)[0];
+  getFeaturedDish(): Promise<Dish> {
+    return new Promise(resolve => {
+      setTimeout(()=>{ resolve(DISHES.filter((dish) => dish.featured)[0]); }, 2000);
+    });
   }
 }

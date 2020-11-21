@@ -14,7 +14,9 @@ export class ContactComponent implements OnInit {
   contactType = ContactType;
 
   @ViewChild('fform') feedbackFormDirective;
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder) { 
+    this.createForm();
+  }
 
   ngOnInit(): void {
   }
