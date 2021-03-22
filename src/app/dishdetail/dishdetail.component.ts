@@ -22,6 +22,7 @@ export class DishdetailComponent implements OnInit {
   commentForm: FormGroup;
   newComment: Comment;
   commentFormState: boolean;
+  errMess: string;
 
   constructor(
     private dishservice: DishService,
@@ -54,7 +55,8 @@ export class DishdetailComponent implements OnInit {
       .subscribe(dish => {
         this.dish = dish;
         this.setPrevNext(dish.id);
-      });
+      },
+      error => this.errMess = <any>error);
   }
 
   setPrevNext(id: string){

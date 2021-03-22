@@ -48,8 +48,12 @@
 </mat-card>
 
 
-<div [hidden]="dish && promotion && featuredleader">
+<div [hidden]="dish && promotion && featuredleader || dishErrMess">
   <mat-spinner></mat-spinner><h4>loading...</h4>
+</div>
+<div fxFlex *ngIf="dishErrMess">
+  <h2>Error</h2>
+  <h4>{{errMess}}</h4>
 </div>
 
 </div>
