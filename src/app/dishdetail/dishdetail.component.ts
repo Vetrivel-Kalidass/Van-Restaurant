@@ -21,13 +21,14 @@ export class DishdetailComponent implements OnInit {
 
   commentForm: FormGroup;
   newComment: Comment;
+  commentFormState: boolean;
 
   constructor(
     private dishservice: DishService,
     private route: ActivatedRoute,
     private location: Location,
     private fb: FormBuilder
-    ) { 
+    ) {
       this.createForm();
     }
 
@@ -68,16 +69,16 @@ export class DishdetailComponent implements OnInit {
     const newComment: Comment = {...this.commentForm.value, "date": dateTime.toISOString()};
     this.dish.comments.push(newComment);
     this.commentForm.reset();
+    this.toggleCommentForm();
   }
 
   createForm(){
     this.commentForm = this.fb.group({
-      author: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(25)]],
-      rating: [5], 
-      comment: ['', Validators.required]
+      author: this.fb.control(null, [Validators.required, Validators.minLength(2), Validators.maxLength(25)]),
+      rating: this.fb.control(5),
+      comment: this.fb.control(null, Validators.required)
     });
     this.commentForm.valueChanges.subscribe(data => this.validation(data));
-    this.validation();
   }
 
   validation(data?: any){
@@ -91,6 +92,10 @@ export class DishdetailComponent implements OnInit {
         }
       }
     }
+  }
+
+  toggleCommentForm() {
+    this.commentFormState = !this.commentFormState;
   }
 
 }

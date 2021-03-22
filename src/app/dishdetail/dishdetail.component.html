@@ -3,7 +3,7 @@
     fxLayout.sm="column"
     fxLayout.xs="column"
     fxLayoutAlign.gt-md="space-around center"
-    fxLayoutGap="10px" 
+    fxLayoutGap="10px"
     fxLayoutGap.xs="0">
 
     <div *ngIf="!dish">
@@ -55,10 +55,10 @@
     </mat-list-item>
   </mat-list>
   </div>
- <div class="container"
+  <button mat-button *ngIf="!commentFormState" (click)="toggleCommentForm()">Give us a Comment</button>
+ <div class="container"  *ngIf="commentFormState"
      fxLayout="column"
      fxLayoutGap="10px">
-
      <h4>Give us a Comment</h4>
      <form novalidate [formGroup]="commentForm" (ngSubmit)="onSubmit()" >
        <mat-form-field>
@@ -72,9 +72,9 @@
         <textarea matInput formControlName = 'comment' placeholder="comments here" rows="3"></textarea>
          <mat-error *ngIf = "formErrors.comment">{{ formErrors.comment }}</mat-error>
        </mat-form-field>
-  
+
          <button mat-button type="submit" [disabled] = "commentForm.invalid">Send</button>
-    
+
      </form>
   </div>
 </div>
