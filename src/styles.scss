@@ -5,11 +5,11 @@
 // @import 'variables';
 @import '../node_modules/font-awesome/scss/font-awesome';
 
-body { 
-  padding: 0; 
-  margin: 0; 
-  font-family: Roboto, sans-serif; 
-  
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+
 }
 
 .container {
@@ -45,6 +45,13 @@ $divider-color:        #BDBDBD;
   }
 .text-floral-white {
     color: floralwhite!important;
+}
+
+.highlight {
+  background-color: $background-pale;
+  border: 1px solid $primary-color-dark;
+  z-index: 1;
+  transform: scale(1.01);
 }
 
 .flex-spacer {
