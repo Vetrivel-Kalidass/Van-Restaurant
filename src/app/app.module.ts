@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -49,7 +49,6 @@ import { HighlightDirective } from './directives/highlight.directive';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     MatToolbarModule,
     FlexLayoutModule,
     MatListModule,
@@ -67,7 +66,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     MatSelectModule,
     MatProgressSpinnerModule,
     MatSliderModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   entryComponents: [LoginComponent],
   providers: [DishService, LeaderService, PromotionService, { provide: 'BaseURL', useValue: baseURL }],

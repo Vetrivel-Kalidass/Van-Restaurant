@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
+import { visibility } from '../animations/app.animation';
 import { DishService } from '../services/dish.service';
 import { Comment } from '../shared/comments';
 import { Dish } from '../shared/dish';
@@ -13,17 +14,7 @@ import { Dish } from '../shared/dish';
   templateUrl: './dishdetail.component.html',
   styleUrls: ['./dishdetail.component.css'],
   animations: [
-    trigger('visibility', [
-      state('shown', style({
-        transform: 'scale(1.0)',
-        opacity: 1
-      })),
-      state('hidden', style({
-        transform: 'scale(1.0)',
-        opacity: 0
-      })),
-      transition('* => *', animate('0.5s ease-in-out'))
-    ])
+    visibility()
   ]
 })
 export class DishdetailComponent implements OnInit {
