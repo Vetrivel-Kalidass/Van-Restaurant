@@ -1,0 +1,210 @@
+/* VR - THEMING COLORS
+ * Theme level color palettes added here
+ * and assigned to primary, accent and warn colors from palette
+ * please go through https://material.angular.io/guide/theming
+ */
+
+ $vr-orange: (
+    50: #f9e7e6,
+    100: #fac7ba,
+    200: #f7a38e,
+    300: #f37e61,
+    400: #f26240,
+    500: #f04420,
+    600: #e53f1d,
+    700: #d83818,
+    800: #ca3114,
+    900: #b1240b,
+    A100: #e53f1d,
+    A200: #d83818,
+    A400: #ca3114,
+    A700: #b1240b,
+    contrast: (
+        50: $dark-primary-text,
+        100: $dark-primary-text,
+        200: $dark-primary-text,
+        300: $dark-primary-text,
+        400: $dark-primary-text,
+        500: $light-primary-text,
+        600: $light-primary-text,
+        700: $light-primary-text,
+        800: $light-primary-text,
+        900: $light-primary-text,
+        A100: $dark-primary-text,
+        A200: $dark-primary-text,
+        A400: $dark-primary-text,
+        A700: $dark-primary-text
+    )
+);
+
+$vr-grey: (
+    50: #eaeef1,
+    100: #ccd6da,
+    200: #abbbc2,
+    300: #8aa0aa,
+    400: #718b97,
+    500: #587885,
+    600: #4c6975,
+    700: #3e555f,
+    800: #30434a,
+    900: #202e34,
+    A100: #4c6975,
+    A200: #3e555f,
+    A400: #30434a,
+    A700: #202e34,
+    contrast: (
+        50: $dark-primary-text,
+        100: $dark-primary-text,
+        200: $dark-primary-text,
+        300: $dark-primary-text,
+        400: $dark-primary-text,
+        500: $light-primary-text,
+        600: $light-primary-text,
+        700: $light-primary-text,
+        800: $light-primary-text,
+        900: $light-primary-text,
+        A100: $dark-primary-text,
+        A200: $light-primary-text,
+        A400: $light-primary-text,
+        A700: $light-primary-text
+    )
+);
+
+$vr-purple: (
+    50: #ecebfa,
+    100: #d0cbf2,
+    200: #b1aae9,
+    300: #9288e0,
+    400: #7d6bd8,
+    500: #6c4fcb,
+    600: #6546c0,
+    700: #5d3bb3,
+    800: #562fa6,
+    900: #4a188f,
+    A100: #6546c0,
+    A200: #5d3bb3,
+    A400: #562fa6,
+    A700: #4a188f,
+    contrast: (
+        50: $dark-primary-text,
+        100: $dark-primary-text,
+        200: $dark-primary-text,
+        300: $dark-primary-text,
+        400: $dark-primary-text,
+        500: $light-primary-text,
+        600: $light-primary-text,
+        700: $light-primary-text,
+        800: $light-primary-text,
+        900: $light-primary-text,
+        A100: $dark-primary-text,
+        A200: $dark-primary-text,
+        A400: $dark-primary-text,
+        A700: $light-primary-text
+    )
+);
+
+$vr-primary: mat-palette($vr-orange, 300);
+$vr-accent: mat-palette($vr-grey, 200);
+$vr-warn: mat-palette($vr-purple, 300);
+
+$vr-theme: mat-light-theme($vr-primary, $vr-accent, $vr-warn);
+
+$vr-dark-primary: mat-palette($vr-orange, 300);
+$vr-dark-accent: mat-palette($vr-grey, 200);
+$vr-dark-warn: mat-palette($vr-purple, 300);
+$vr-dark-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $vr-dark-primary,
+      accent: $vr-dark-accent,
+      warn: $vr-dark-warn,
+    ),
+  )
+);
+
+/******************************************************************************************************************/
+
+/* VR - FONT THEMING */
+/* for info how typograpghy implemented, see below link
+ * https://material.angular.io/guide/typography
+ * here I swapped few of default typography so, please use them by assigning with based on the class name
+ * already mentioned the { tag-name } - { class name } on each typo
+ * you can see the Typo tag name on design. to get that typo use the class name.
+ */
+
+$vr-typography: mat-typography-config(
+    $display-4: /* Display - .mat-display-4*/
+        mat-typography-level(
+            $font-size: 28px,
+            $line-height: 140%,
+            $font-weight: 600
+        ),
+    $display-3: /* Display-1 - .mat-display-3*/
+        mat-typography-level(
+            $font-size: 32px,
+            $line-height: 140%,
+            $font-weight: 600
+        ),
+    $display-2: /* Display-20 - .mat-display-2*/
+        mat-typography-level(
+            $font-size: 20px,
+            $line-height: 120%,
+            $font-weight: 400
+        ),
+    $display-1: /* Heading/H1 - .mat-display-1*/
+        mat-typography-level(
+            $font-size: 28px,
+            $line-height: 140%,
+            $font-weight: 600
+        ),
+    $headline: /* Heading/H2 - .mat-h1 or .mat-headline or <h1>*/
+        mat-typography-level(
+            $font-size: 20px,
+            $line-height: 140%,
+            $font-weight: 600
+        ),
+    $title: /*  Body/Large - Regular - .mat-h2 or .mat-title	or	<h2>*/
+        mat-typography-level(
+            $font-size: 16px,
+            $line-height: 140%,
+            $font-weight: 400
+        ),
+    $subheading-1: /* Body/Normal - Semibold - .mat-h3 or .mat-subheading-1 or	<h3> */
+        mat-typography-level(
+            $font-size: 14px,
+            $line-height: 140%,
+            $font-weight: 600
+        ),
+    $subheading-2: /* Body/Normal - Medium - .mat-h4 or .mat-subheading-2 or	<h4> */
+        mat-typography-level(
+            $font-size: 14px,
+            $line-height: 130%,
+            $font-weight: 500
+        ),
+    $body-1: /* Body/Normal - Regular - .mat-body or .mat-body-1 */
+        mat-typography-level(
+            $font-size: 14px,
+            $line-height: 140%,
+            $font-weight: 400
+        ),
+    $body-2: /* Body/Small - Medium - .mat-body-strong or .mat-body-2 */
+        mat-typography-level(
+            $font-size: 12px,
+            $line-height: 140%,
+            $font-weight: 500
+        ),
+    $caption: /* Body/Small - Regular - .mat-small or .mat-caption */
+        mat-typography-level(
+            $font-size: 12px,
+            $line-height: 140%,
+            $font-weight: 400
+        ),
+    $button: /* Button/Normal */
+        mat-typography-level(
+            $font-size: 14px,
+            $line-height: 140%,
+            $font-weight: 500
+        )
+);
+
+/******************************************************************************************************************/

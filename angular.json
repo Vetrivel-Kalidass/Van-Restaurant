@@ -31,6 +31,9 @@
               "src/assets"
             ],
             "styles": [
+              "src/app/styles/custom-materials.styles.scss",
+              "src/app/styles/margins-paddings.styles.scss",
+              "src/app/styles/other.styles.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -99,6 +102,9 @@
               "src/assets"
             ],
             "styles": [
+              "src/app/styles/custom-materials.styles.scss",
+              "src/app/styles/margins-paddings.styles.scss",
+              "src/app/styles/other.styles.scss",
               "src/styles.scss"
             ],
             "scripts": []

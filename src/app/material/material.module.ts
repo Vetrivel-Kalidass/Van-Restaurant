@@ -10,7 +10,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
- 
+import {MatDividerModule} from '@angular/material/divider';
+
 
 const MaterialComponent = [
   MatCardModule,
@@ -22,7 +23,8 @@ const MaterialComponent = [
   MatProgressBarModule,
   MatProgressSpinnerModule,
   MatSelectModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatDividerModule
 ];
 
 @NgModule({

@@ -1,0 +1,173 @@
+@import '../../styles.scss';
+
+/* TEXT COLORS */
+
+/* base */
+.txt-white {
+    color: $vr-white !important;
+}
+.txt-black {
+    color: $vr-black !important;
+}
+
+/* light */
+.txt-base-light {
+    color: $vr-base-bg !important;
+}
+.txt-lighter {
+    color: $vr-lighter-txt !important;
+}
+.txt-light {
+    color: $vr-light-txt !important;
+}
+
+/* grey */
+.txt-grey {
+    color: $vr-grey-txt !important;
+}
+.txt-dark-grey {
+    color: $vr-dark-txt !important;
+}
+
+/* dark */
+.txt-dark-form {
+    color: $vr-base-form-bg !important;
+}
+.txt-dark-1 {
+    color: $vr-base-dark-bg1 !important;
+}
+.txt-dark-2 {
+    color: $vr-base-dark-bg2 !important;
+}
+.txt-dark-line {
+    color: $vr-base-dark-line !important;
+}
+
+/* Main colors */
+.txt-transparent {
+    color: transparent !important;
+}
+.txt-primary {
+    color: $primary-text !important;
+}
+.txt-accent {
+    color: $accent-text !important;
+}
+.txt-warn {
+    color: $warn-text !important;
+}
+
+/* Alternate main colors */
+.txt-alt-primary {
+    color: $primary-bg !important;
+}
+.txt-alt-accent {
+    color: $accent-bg !important;
+}
+.txt-alt-warn {
+    color: $warn-bg !important;
+}
+
+/* Other colors */
+.txt-green {
+    color: $vr-accent-green !important;
+}
+.txt-red {
+    color: $vr-accent-red !important;
+}
+.txt-orange {
+    color: $vr-accent-orange !important;
+}
+.txt-blue {
+    color: $vr-accent-blue !important;
+}
+.txt-purple {
+    color: $vr-accent-purple !important;
+}
+
+/***********************************************************************************/
+
+/* BACKGROUNDS */
+
+/* base */
+.bg-white {
+    background-color: $vr-white !important;
+}
+.bg-black {
+    background-color: $vr-black !important;
+}
+
+/* light */
+.bg-base-light {
+    background-color: $vr-base-bg !important;
+}
+.bg-lighter {
+    background-color: $vr-lighter-txt !important;
+}
+.bg-light {
+    background-color: $vr-light-txt !important;
+}
+
+/* grey */
+.bg-grey {
+    background-color: $vr-grey-txt !important;
+}
+.bg-dark-grey {
+    background-color: $vr-dark-txt !important;
+}
+
+/* dark */
+.bg-dark-form {
+    background-color: $vr-base-form-bg !important;
+}
+.bg-dark-1 {
+    background-color: $vr-base-dark-bg1 !important;
+}
+.bg-dark-2 {
+    background-color: $vr-base-dark-bg2 !important;
+}
+.bg-dark-line {
+    background-color: $vr-base-dark-line !important;
+}
+
+/* Main colors */
+.bg-transparent {
+    background-color: transparent !important;
+}
+.bg-primary {
+    background-color: $primary-text !important;
+}
+.bg-accent {
+    background-color: $accent-text !important;
+}
+.bg-warn {
+    background-color: $warn-text !important;
+}
+
+/* Alternate main colors */
+.bg-alt-primary {
+    background-color: $primary-bg !important;
+}
+.bg-alt-accent {
+    background-color: $accent-bg !important;
+}
+.bg-alt-warn {
+    background-color: $warn-bg !important;
+}
+
+/* Other colors */
+.bg-green {
+    background-color: $vr-accent-green !important;
+}
+.bg-red {
+    background-color: $vr-accent-red !important;
+}
+.bg-orange {
+    background-color: $vr-accent-orange !important;
+}
+.bg-blue {
+    background-color: $vr-accent-blue !important;
+}
+.bg-purple {
+    background-color: $vr-accent-purple !important;
+}
