@@ -1,61 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/theming";
+@import './theme.scss';
+
+@include mat-core();
+
+@include angular-material-theme($vr-theme);
+@include angular-material-typography($vr-typography);
+
+.dark-theme {
+    @include angular-material-color($vr-dark-theme);
+}
 
 
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+/* variables
+ * Please define the global theme level color variables here
+ */
 
-// @import 'variables';
-@import '../node_modules/font-awesome/scss/font-awesome';
+ $primary-text: mat-color($vr-primary);
+ $accent-text: mat-color($vr-accent);
+ $warn-text: mat-color($vr-warn);
 
+ $primary-bg: rgba(234, 124, 105, 0.12);
+ $accent-bg: rgba(171, 187, 194, 0.12);
+ $warn-bg: rgba(146, 136, 224, 0.12);
+ 
+ 
+ $vr-white: #ffffff;
+ $vr-black: #000000;
+ 
+ $vr-dark-txt: #3B5162;
+ $vr-grey-txt: #889898;
+ $vr-light-txt: #ABBBC2;
+ $vr-lighter-txt: #E0E6E9;
+ 
+ $vr-base-bg: #FAFAFA;
+ $vr-base-form-bg: #2D303E;
+ $vr-base-dark-bg1: #252836;
+ $vr-base-dark-bg2: #1F1D2B;
+ $vr-base-dark-line: #393C49;
+ 
+ $vr-accent-green: #50D1AA;
+ $vr-accent-red: #FF7CA3;
+ $vr-accent-orange: #FFB572;
+ $vr-accent-blue: #65B0F6;
+ $vr-accent-purple: #9290FE;
+ 
+
+html,
 body {
-  padding: 0;
+  height: 100%;
+}
+body {
   margin: 0;
-  font-family: Roboto, sans-serif;
-
+  font-family: "Barlow", sans-serif;
+  color: $vr-white;
+  background-color: $vr-base-dark-bg1;
 }
-
-.container {
-    margin: 20px;
-    display:flex;
-}
-
-
-$lt-gray: #ddd;
-$background-dark: #512DA8;
-$background-light: #9575CD;
-$background-pale: #D1C4E9;
-$primary-color-dark:   #512DA8;
-$primary-color:        #673AB7;
-$primary-color-light:  #D1C4E9;
-$primary-color-text:   #FFFFFF;
-$accent-color:         #FFC107;
-$primary-text-color:   #212121;
-$secondary-text-color: #757575;
-$divider-color:        #BDBDBD;
-
-@mixin zero-margin($pad-up-down, $pad-left-right) {
-    margin: 0px auto;
-    padding: $pad-up-down $pad-left-right;
-}
-
-
-.background-primary {
-    background-color: $background-dark!important;
-  }
-.background-accent {
-    background-color: $accent-color!important;
-  }
-.text-floral-white {
-    color: floralwhite!important;
-}
-
-.highlight {
-  background-color: $background-pale;
-  border: 1px solid $primary-color-dark;
-  z-index: 1;
-  transform: scale(1.01);
-}
-
-.flex-spacer {
-  flex: 1 1 auto;
-}
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,33 @@
+@import '../../styles.scss';
+
+/* BUTTONS */
+button.mat-primary.mat-raised-button *, button.mat-accent.mat-raised-button *, button.mat-warn.mat-raised-button *, 
+button.mat-primary.mat-fab *, button.mat-accent.mat-fab *, button.mat-warn.mat-fab *, 
+button.mat-primary.mat-mini-fab *, button.mat-accent.mat-mini-fab *, button.mat-warn.mat-mini-fab *, 
+button.mat-primary.mat-flat-button *, button.mat-accent.mat-flat-button *, button.mat-warn.mat-flat-button * {
+    color: $vr-base-bg !important;
+}
+.mat-button-disabled * {
+    color: $vr-dark-txt !important;
+}
+.mat-stroked-button {
+    border: 1px solid $vr-dark-txt !important;
+}
+.mat-stroked-button.mat-primary {
+    border: 1px solid $primary-text !important;
+}
+.mat-stroked-button.mat-accent {
+    border: 1px solid $accent-text !important;
+}
+.mat-stroked-button.mat-warn {
+    border: 1px solid $warn-text !important;
+}
+.mat-button.mat-primary.alt-btn {
+    background-color: $primary-bg !important;
+}
+.mat-button.mat-accent.alt-btn {
+    background-color: $accent-bg !important;
+}
+.mat-button.mat-warn.alt-btn {
+    background-color: $warn-bg !important;
+}
