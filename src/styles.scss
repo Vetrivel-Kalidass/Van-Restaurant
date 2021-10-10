@@ -8,10 +8,9 @@
 @include angular-material-theme($vr-theme);
 @include angular-material-typography($vr-typography);
 
-.dark-theme {
+.darkMode {
     @include angular-material-color($vr-dark-theme);
 }
-
 
 /* variables
  * Please define the global theme level color variables here
@@ -56,4 +55,11 @@ body {
   font-family: "Barlow", sans-serif;
   color: $vr-white;
   background-color: $vr-base-dark-bg1;
+}
+
+.text-dec-none {
+  text-decoration: none !important;
+}
+.pointer-cursor {
+  cursor: pointer !important;
 }

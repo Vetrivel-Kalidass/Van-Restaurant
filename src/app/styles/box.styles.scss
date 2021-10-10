@@ -1,0 +1,99 @@
+/* BOX STYLES */
+.wp-100 {
+    width: 100% !important;
+}
+.hp-100 {
+    height: 100% !important;
+}
+
+$sizes: 0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100;
+
+/* WIDTH, HEIGHT, BORDER RADIUS */
+@each $size in $sizes {
+    .vw-#{$size} {
+        width: #{$size}vw !important;
+    }
+    .vh-#{$size} {
+        height: #{$size}vh !important;
+    }
+    .w-#{$size} {
+        width: #{$size}px !important;
+    }
+    .h-#{$size} {
+        height: #{$size}px !important;
+    }
+    .border-#{$size} {
+        border-radius: #{$size}px !important;
+    }
+    .border-ly-#{$size} {
+        border-top-left-radius: #{$size}px !important;
+        border-bottom-left-radius: #{$size}px !important;
+    }
+    .border-ry-#{$size} {
+        border-top-right-radius: #{$size}px !important;
+        border-bottom-right-radius: #{$size}px !important;
+    }
+}
+
+/* BOX DISPLAY */
+.d-block {
+    display: block !important;
+}
+.d-flex {
+    display: flex !important;
+}
+.d-grid {
+    display: grid !important;
+}
+
+
+/* FLEX-BOX STYLES */
+.flex-col {
+    flex-direction: column !important;
+}
+.flex-row {
+    flex-direction: row !important;
+}
+.justify-content-center {
+    justify-content: center !important;
+}
+.justify-content-start {
+    justify-content: flex-start !important;
+}
+.justify-content-end {
+    justify-content: flex-end !important;
+}
+.justify-content-around {
+    justify-content: space-around !important;
+}
+.justify-content-between {
+    justify-content: space-between !important;
+}
+.justify-content-evenly {
+    justify-content: space-evenly !important;
+}
+
+.align-items-start {
+    align-items: flex-start !important;
+}
+.align-items-end {
+    align-items: flex-end !important;
+}
+.align-items-center {
+    align-items: center !important;
+}
+.align-content-center {
+    align-content: center !important;
+}
+.align-content-start {
+    align-content: flex-start !important;
+}
+.align-content-end {
+    align-content: flex-end !important;
+}
+.align-content-around {
+    align-content: space-around !important;
+}
+.align-content-between {
+    align-content: space-between !important;
+}
