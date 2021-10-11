@@ -23,28 +23,29 @@
  $primary-bg: rgba(234, 124, 105, 0.12);
  $accent-bg: rgba(171, 187, 194, 0.12);
  $warn-bg: rgba(146, 136, 224, 0.12);
- 
- 
+
+
  $vr-white: #ffffff;
  $vr-black: #000000;
- 
+
  $vr-dark-txt: #3B5162;
  $vr-grey-txt: #889898;
  $vr-light-txt: #ABBBC2;
  $vr-lighter-txt: #E0E6E9;
- 
+
  $vr-base-bg: #FAFAFA;
  $vr-base-form-bg: #2D303E;
  $vr-base-dark-bg1: #252836;
  $vr-base-dark-bg2: #1F1D2B;
  $vr-base-dark-line: #393C49;
- 
+
  $vr-accent-green: #50D1AA;
  $vr-accent-red: #FF7CA3;
  $vr-accent-orange: #FFB572;
  $vr-accent-blue: #65B0F6;
  $vr-accent-purple: #9290FE;
- 
+
+ $vr-btn-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%), 0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%);
 
 html,
 body {
@@ -57,6 +58,21 @@ body {
   color: $vr-white;
   background-color: $vr-base-dark-bg1;
 }
+
+/* SCROLL BAR STYLES */
+body *::-webkit-scrollbar {
+  width: 4px !important;
+  height: 4px !important;
+}
+body *::-webkit-scrollbar-thumb {
+  background: $vr-base-dark-bg1 !important;
+  cursor: pointer;
+  border-radius: 0.15625rem;
+}
+body *::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
 
 .text-dec-none {
   text-decoration: none !important;
