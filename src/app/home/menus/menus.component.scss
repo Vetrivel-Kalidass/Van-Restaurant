@@ -1,0 +1,16 @@
+.top-left {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 99;
+  .display-1 {
+    font-size: 48px;
+  }
+}
+.bottom-right {
+  position: absolute;
+  width: 400px;
+  bottom: 32px;
+  right: 32px;
+  z-index: 99;
+}

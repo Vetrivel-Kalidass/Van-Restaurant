@@ -73,7 +73,11 @@ body *::-webkit-scrollbar-track {
   background: transparent !important;
 }
 
-
+.main-content {
+  max-width: 1440px;
+  margin: auto !important;
+  overflow-x: hidden;
+}
 .text-dec-none {
   text-decoration: none !important;
 }
