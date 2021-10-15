@@ -1,6 +1,6 @@
-<div class="main-content bg-white">
+<div class="main-content">
     <carousel
-        class="mb-40"
+        class="banner-carousel mb-40"
         [height]="carouselConfig.height"
         [cellWidth]="'100%'"
         [pauseOnHover]="carouselConfig.pauseOnHover"
@@ -33,8 +33,9 @@
     </div>
     </carousel>
 
-    <div class="py-16">
-      <vr-carousel-list [dishes]="dishes"></vr-carousel-list>
+    <div class="p-16">
+      <vr-carousel-list [dishes]="dishes" [dishType]="'edit'"></vr-carousel-list>
+      <vr-carousel-list [dishes]="dishes" [dishType]="'view'"></vr-carousel-list>
     </div>
 
 </div>

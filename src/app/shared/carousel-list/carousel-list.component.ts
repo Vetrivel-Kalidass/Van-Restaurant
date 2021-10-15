@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CarouselListComponent implements OnInit {
 
   @Input() dishes: any[] = [];
+  @Input() dishType: 'view' | 'edit' = "view";
 
   carouselConfig = {
     cellWidth: "100%",
@@ -19,9 +20,11 @@ export class CarouselListComponent implements OnInit {
     loop: true,
     cellsToShow: 5
   };
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit(): void {
+    this.carouselConfig.height = this.dishType === 'edit' ? 299 : 265;
   }
 
 }

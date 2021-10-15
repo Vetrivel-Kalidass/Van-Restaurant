@@ -133,8 +133,6 @@ mat-drawer {
 /* CAROUSEL COMPONENT */
 carousel {
   .carousel-container, .carousel-cell > img {
-    object-fit: cover !important;
-    border-radius: 16px !important;
     cursor: unset !important;
   }
   .carousel-dots {
@@ -142,5 +140,14 @@ carousel {
   }
   .carousel-arrow {
     opacity: .5 !important;
+  }
+  .carousel-arrow.carousel-arrow-disabled {
+    visibility: hidden !important;
+  }
+}
+carousel.banner-carousel {
+  .carousel-container, .carousel-cell > img {
+    object-fit: cover !important;
+    border-radius: 16px !important;
   }
 }

@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DishCardComponent implements OnInit {
 
   @Input() dish: any;
+  @Input() dishType: 'view' | 'edit' = "view";
 
   constructor() { }
 
