@@ -1,16 +1,8 @@
 <div class="main-content">
-    <carousel
-        class="banner-carousel mb-40"
-        [height]="carouselConfig.height"
-        [cellWidth]="'100%'"
-        [pauseOnHover]="carouselConfig.pauseOnHover"
-        [arrows]="carouselConfig.arrows"
-        [arrowsTheme]="'dark'"
-        [autoplay]="carouselConfig.autoplay"
-        [dots]="carouselConfig.dots"
-        [loop]="carouselConfig.loop"
-        [cellsToShow]="carouselConfig.cellsToShow"
-    >
+  <carousel class="banner-carousel mb-40" [height]="carouselConfig.height" [cellWidth]="'100%'"
+    [pauseOnHover]="carouselConfig.pauseOnHover" [arrows]="carouselConfig.arrows" [arrowsTheme]="'dark'"
+    [autoplay]="carouselConfig.autoplay" [dots]="carouselConfig.dots" [loop]="carouselConfig.loop"
+    [cellsToShow]="carouselConfig.cellsToShow">
     <div *ngFor="let img of carouselConfig.images" class="carousel-cell">
       <div class="top-left">
         <div class="display-1">Promotion Name</div>
@@ -18,9 +10,9 @@
       </div>
       <div class="bottom-right">
         <div class="mat-subheading-1 mb-8">
-            Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers,
-            six main entrees and five choicest desserts. Free flowing bubbly and soft drinks.
-            All for just $19.99 per person
+          Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers,
+          six main entrees and five choicest desserts. Free flowing bubbly and soft drinks.
+          All for just $19.99 per person
         </div>
         <div class="d-flex justify-content-end">
           <button mat-raised-button color="primary">
@@ -29,13 +21,43 @@
           </button>
         </div>
       </div>
-        <img [src]="img.path">
+      <img [src]="img.path">
     </div>
-    </carousel>
+  </carousel>
 
-    <div class="p-16">
-      <vr-carousel-list [dishes]="dishes" [dishType]="'edit'"></vr-carousel-list>
+  <div class="p-16 pt-20">
+
+    <div class="carousel-grp">
+      <div class="mat-headline mb-24">Today’s treat from us</div>
       <vr-carousel-list [dishes]="dishes" [dishType]="'view'"></vr-carousel-list>
     </div>
+
+    <div class="carousel-grp">
+      <div class="mat-headline mb-24">Choose food by your taste today!</div>
+      <carousel class="mb-40" [height]="dishCarouselConfig.height" [cellWidth]="'100%'"
+        [pauseOnHover]="dishCarouselConfig.pauseOnHover" [arrows]="dishCarouselConfig.arrows" [arrowsTheme]="'dark'"
+        [autoplay]="dishCarouselConfig.autoplay" [dots]="dishCarouselConfig.dots" [loop]="dishCarouselConfig.loop"
+        [cellsToShow]="6">
+        <div *ngFor="let img of carouselConfig.images" class="carousel-cell">
+          <div class="img-wrapper">
+            <div class="mat-headline">HOT DISHES</div>
+            <img src="../../../assets/images/bg-1.png" alt="">
+          </div>
+        </div>
+        <div *ngFor="let img of carouselConfig.images" class="carousel-cell">
+          <div class="img-wrapper">
+            <div class="mat-headline">HOT DISHES</div>
+            <img src="../../../assets/images/bg-1.png" alt="">
+          </div>
+        </div>
+      </carousel>
+    </div>
+
+    <div class="carousel-grp">
+      <div class="mat-headline mb-24">Today’s treat from us</div>
+      <vr-carousel-list [dishes]="dishes" [dishType]="'edit'"></vr-carousel-list>
+    </div>
+
+  </div>
 
 </div>

@@ -6,7 +6,8 @@
 
     <mat-nav-list role="navigation" aria-label="Side Menu">
       <a
-        *ngFor="let i of menuItems"
+        *ngFor="let i of menuItems" 
+        class="hover-bounce hover-lg"
         mat-list-item [routerLink]="i.path"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: i.path === '/home' }"
@@ -14,7 +15,7 @@
         <mat-icon class="material-icons-outlined">{{i.icon}}</mat-icon>
       </a>
 
-      <a mat-list-item>
+      <a mat-list-item class="hover-bounce hover-lg">
         <mat-icon class="material-icons-outlined">logout</mat-icon>
       </a>
     </mat-nav-list>

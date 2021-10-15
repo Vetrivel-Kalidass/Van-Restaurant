@@ -24,6 +24,16 @@ export class MenusComponent implements OnInit {
     loop: true,
     cellsToShow: 1
   };
+  dishCarouselConfig = {
+    cellWidth: "100%",
+    height: 170,
+    pauseOnHover: true,
+    arrows: true,
+    autoplay: true,
+    dots: false,
+    loop: true,
+    cellsToShow: 5
+  };
 
   dishes: any[] = [
     {
