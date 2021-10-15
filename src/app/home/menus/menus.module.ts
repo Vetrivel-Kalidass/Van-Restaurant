@@ -5,6 +5,7 @@ import { MenusRoutingModule } from './menus-routing.module';
 import { MenusComponent } from './menus.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { MaterialModule } from 'src/app/material/material.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { MaterialModule } from 'src/app/material/material.module';
     CommonModule,
     MenusRoutingModule,
     IvyCarouselModule,
-    MaterialModule
+    MaterialModule,
+    SharedModule
   ]
 })
 export class MenusModule { }

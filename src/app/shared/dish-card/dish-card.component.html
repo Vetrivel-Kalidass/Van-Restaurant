@@ -1,0 +1,28 @@
+<!-- <a *ngIf="dish" class="card-wrapper d-flex align-items-end border-16">
+    <mat-card class="bg-dark-1 border-16 p-0">
+            <div class="top-section">
+                <img [src]="dish.image" [alt]="dish.name">
+            </div>
+            <div class="bottom-section">
+                <div class="mat-subheading-2 txt-white mb-8">{{ dish.name }}</div>
+                <div class="mat-body-1 txt-white mb-4">$ {{ dish.price }}</div>
+                <div class="mat-body-1 txt-light">{{ dish.avbl }} Bowls available</div>
+            </div>
+    </mat-card>
+</a> -->
+
+<a *ngIf="dish" class="card-wrapper edit-card d-flex align-items-end">
+    <mat-card class="bg-dark-2 p-0">
+            <div class="top-section">
+                <img [src]="dish.image" [alt]="dish.name">
+            </div>
+            <div class="bottom-section">
+                <div class="mat-subheading-2 txt-white mb-8">{{ dish.name }}</div>
+                <div class="mat-body-1 txt-light">$ {{ dish.price }} - {{ dish.avl }} Bowls</div>
+                <button mat-button color="primary" class="alt-btn">
+                    <mat-icon class="material-icons-outlined mr-6">drive_file_rename_outline</mat-icon>
+                    <span>REMOVE</span>
+                </button>
+            </div>
+    </mat-card>
+</a>
