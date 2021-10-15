@@ -21,7 +21,7 @@ export class SidenavComponent implements OnInit {
     {
       label: "Favourites",
       icon: "bookmark_border",
-      path: "/Favourites"
+      path: "/home/favourites"
     },
     {
       label: "Dashboard",
