@@ -1,4 +1,4 @@
-<a *ngIf="dish" class="card-wrapper d-flex align-items-end" [ngClass]="{ 'edit-card' : dishType === 'edit' }">
+<a *ngIf="dish" (click)="navigateTo(dish.price)" class="card-wrapper d-flex align-items-end" [ngClass]="{ 'edit-card' : dishType === 'edit' }">
     <mat-card class="bg-dark-2 p-0">
             <div class="top-section">
                 <img [src]="dish.image" [alt]="dish.name">

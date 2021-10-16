@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'vr-dish-card',
@@ -10,9 +11,13 @@ export class DishCardComponent implements OnInit {
   @Input() dish: any;
   @Input() dishType: 'view' | 'edit' = "view";
 
-  constructor() { }
+  constructor( private _router: Router ) { }
 
   ngOnInit(): void {
+  }
+
+  navigateTo(id: any) {
+    this._router.navigate(['./home', id]);
   }
 
 }
