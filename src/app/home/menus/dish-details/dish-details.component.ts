@@ -28,8 +28,4 @@ export class DishDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submitRating(value: any) {
-    console.log(value);
-  }
-
 }

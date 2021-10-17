@@ -8,13 +8,15 @@ import { MaterialModule } from 'src/app/material/material.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { DishDetailsComponent } from './dish-details/dish-details.component';
 import { CommentsComponent } from './comments/comments.component';
+import { DescriptionComponent } from './description/description.component';
 
 
 @NgModule({
   declarations: [
     MenusComponent,
     DishDetailsComponent,
-    CommentsComponent
+    CommentsComponent,
+    DescriptionComponent
   ],
   imports: [
     CommonModule,
