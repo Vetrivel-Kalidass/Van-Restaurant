@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { CarouselListComponent } from './carousel-list/carousel-list.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { DishCardComponent } from './dish-card/dish-card.component';
+import { StarRatingComponent } from './star-rating/star-rating.component';
 
 
 
@@ -13,7 +14,8 @@ import { DishCardComponent } from './dish-card/dish-card.component';
   declarations: [
     SidenavComponent,
     CarouselListComponent,
-    DishCardComponent
+    DishCardComponent,
+    StarRatingComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,8 @@ import { DishCardComponent } from './dish-card/dish-card.component';
   exports: [
     SidenavComponent,
     CarouselListComponent,
-    DishCardComponent
+    DishCardComponent,
+    StarRatingComponent
   ]
 })
 export class SharedModule { }

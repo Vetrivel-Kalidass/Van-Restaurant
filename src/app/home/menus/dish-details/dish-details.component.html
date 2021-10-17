@@ -51,9 +51,7 @@
                     <span class="txt-white">SHARE</span>
                 </button>
             </div>
-            <!-- star-rating mat-headline-2 txt-secondary bg-dark-2 d-flex align-items-center border-16 p-12 w-48 -->
-            <!-- <div class="star-rating mat-headline-2">
-            </div> -->
+            
             <button mat-button color="primary" class="alt-btn px-16 py-8 border-16">
                 <span>4.5</span>
                 <mat-icon class="ml-8">star</mat-icon>
@@ -88,29 +86,8 @@
                 </span>
                 <div class="rate-us d-flex flex-col justify-content-start ml-24">
                     <div class="mat-headline-2 txt-grey ml-6 mb-8">Rate Us</div>
-                      <fieldset class="rating mb-24">
-                          <input type="radio" id="star5" name="rating" (change)="submitRating($event)" value="5" /><label class="full" for="star5"
-                              title="Awesome - 5 stars"></label>
-                          <input type="radio" id="star4half" name="rating" (change)="submitRating($event)" value="4 and a half" /><label class="half"
-                              for="star4half" title="Pretty good - 4.5 stars"></label>
-                          <input type="radio" id="star4" name="rating" (change)="submitRating($event)" value="4" /><label class="full" for="star4"
-                              title="Pretty good - 4 stars"></label>
-                          <input type="radio" id="star3half" name="rating" (change)="submitRating($event)" value="3 and a half" /><label class="half"
-                              for="star3half" title="Meh - 3.5 stars"></label>
-                          <input type="radio" id="star3" name="rating" (change)="submitRating($event)" value="3" /><label class="full" for="star3"
-                              title="Meh - 3 stars"></label>
-                          <input type="radio" id="star2half" name="rating" (change)="submitRating($event)" value="2 and a half" /><label class="half"
-                              for="star2half" title="Kinda bad - 2.5 stars"></label>
-                          <input type="radio" id="star2" name="rating" (change)="submitRating($event)" value="2" /><label class="full" for="star2"
-                              title="Kinda bad - 2 stars"></label>
-                          <input type="radio" id="star1half" name="rating" (change)="submitRating($event)" value="1 and a half" /><label class="half"
-                              for="star1half" title="Meh - 1.5 stars"></label>
-                          <input type="radio" id="star1" name="rating" (change)="submitRating($event)" value="1" /><label class="full" for="star1"
-                              title="Sucks big time - 1 star"></label>
-                          <input type="radio" id="starhalf" name="rating" (change)="submitRating($event)" value="half" /><label class="half" for="starhalf"
-                              title="Sucks big time - 0.5 stars"></label>
-                      </fieldset>
-                      <button mat-raised-button color="primary">SUBMIT</button>
+                        <vr-star-rating (rating)="submitRating($event)"></vr-star-rating>
+                      <button mat-raised-button class="mt-24" color="primary">SUBMIT</button>
                 </div>
             </div>
         </div>
