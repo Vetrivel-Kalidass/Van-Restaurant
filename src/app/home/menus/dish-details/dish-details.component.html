@@ -57,8 +57,8 @@
                 <mat-icon class="ml-8">star</mat-icon>
             </button>
         </div>
-        <div class="contents">
-            <div class="mat-headline-1 txt-grey mb-4">Description: </div>
+        <div class="contents px-40 wp-100">
+            <!-- <div class="mat-headline-1 txt-grey mb-8">Description: </div>
             <div class="mat-headline-2 txt-lighter mb-24">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem officia unde, iste quisquam praesentium, 
                 impedit sapiente ratione, dicta eius error autem dolor veniam asperiores! Sapiente, 
@@ -89,10 +89,10 @@
                         <vr-star-rating (rating)="submitRating($event)"></vr-star-rating>
                       <button mat-raised-button class="mt-24" color="primary">SUBMIT</button>
                 </div>
-            </div>
+            </div> -->
+            <vr-comments></vr-comments>
         </div>
     </div>
-    
     <div class="carousel-grp">
         <div class="mat-headline mb-24">Today’s treat from us</div>
         <vr-carousel-list [dishes]="dishes" [dishType]="'view'"></vr-carousel-list>

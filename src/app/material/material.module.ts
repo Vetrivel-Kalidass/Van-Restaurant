@@ -16,6 +16,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatRippleModule} from '@angular/material/core';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 const MaterialComponent = [
   MatCardModule,
@@ -33,7 +34,8 @@ const MaterialComponent = [
   MatSidenavModule,
   MatListModule,
   MatRippleModule,
-  MatTabsModule
+  MatTabsModule,
+  MatGridListModule
 ];
 
 @NgModule({
