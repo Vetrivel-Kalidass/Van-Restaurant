@@ -35,50 +35,7 @@ export class MenusComponent implements OnInit {
     cellsToShow: 5
   };
 
-  dishes: any[] = [
-    {
-      image: "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-      name: "Spicy seasoned seafood noodles",
-      price: 233,
-      avl: 22
-    },
-    {
-      image: "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-      name: "Spicy seasoned seafood noodles",
-      price: 233,
-      avl: 22
-    },
-    {
-      image: "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-      name: "Spicy seasoned seafood noodles",
-      price: 233,
-      avl: 22
-    },
-    {
-      image: "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-      name: "Spicy seasoned seafood noodles",
-      price: 233,
-      avl: 22
-    },
-    {
-      image: "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-      name: "Spicy seasoned seafood noodles",
-      price: 233,
-      avl: 22
-    },
-    {
-      image: "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-      name: "Spicy seasoned seafood noodles",
-      price: 233,
-      avl: 22
-    },
-    {
-      image: "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-      name: "Spicy seasoned seafood noodles",
-      price: 233,
-      avl: 22
-    },
-  ]
+  dishes: any[] = DISHES;
 
   constructor(private ref: ChangeDetectorRef) {
     ref.detach();
@@ -91,3 +48,48 @@ export class MenusComponent implements OnInit {
   }
 
 }
+
+export const DISHES: any[] = [
+  {
+    image: "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    name: "Spicy seasoned seafood noodles",
+    price: 233,
+    avl: 22
+  },
+  {
+    image: "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    name: "Spicy seasoned seafood noodles",
+    price: 233,
+    avl: 22
+  },
+  {
+    image: "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    name: "Spicy seasoned seafood noodles",
+    price: 233,
+    avl: 22
+  },
+  {
+    image: "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    name: "Spicy seasoned seafood noodles",
+    price: 233,
+    avl: 22
+  },
+  {
+    image: "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    name: "Spicy seasoned seafood noodles",
+    price: 233,
+    avl: 22
+  },
+  {
+    image: "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    name: "Spicy seasoned seafood noodles",
+    price: 233,
+    avl: 22
+  },
+  {
+    image: "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    name: "Spicy seasoned seafood noodles",
+    price: 233,
+    avl: 22
+  },
+]

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'vr-carousel-list',
@@ -20,7 +20,12 @@ export class CarouselListComponent implements OnInit {
     loop: true,
     cellsToShow: 5
   };
-  constructor() { 
+  
+  constructor(private ref: ChangeDetectorRef) {
+    ref.detach();
+    setInterval(() => {
+      this.ref.detectChanges();
+    }, 500);
   }
 
   ngOnInit(): void {

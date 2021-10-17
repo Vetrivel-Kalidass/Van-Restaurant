@@ -6,11 +6,13 @@ import { MenusComponent } from './menus.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { MaterialModule } from 'src/app/material/material.module';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { DishDetailsComponent } from './dish-details/dish-details.component';
 
 
 @NgModule({
   declarations: [
-    MenusComponent
+    MenusComponent,
+    DishDetailsComponent
   ],
   imports: [
     CommonModule,

@@ -1,1 +1,131 @@
-<p>dish-details works!</p>
+<div *ngIf="dishId.length" class="main-content">
+    <div class="banner-img border-16 mb-24">
+        <img src="../../../../assets/images/bg-1.png" alt="">
+    </div>
+    <div class="d-flex justify-content-between mb-8">
+        <div class="left-section">
+            <div class="mat-display-4 mb-0">Spicy seasoned seafood noodles</div>
+            <div class="mat-subheading-1 txt-grey mb-4">consumer’s all time favorite.</div>
+            <div class="mat-subheading-2">11 AM - 2PM Onwards</div>
+        </div>
+        <div class="right-section">
+            <span class="d-flex justify-content-end mb-8">
+                <div class="mat-subheading-1 txt-grey mb-0 mt-16 mr-4">Price</div>
+                <div class="mat-display-4 mb-0">$ 299 - 20% Off</div>
+            </span>
+            <div class="d-flex">
+                <button mat-button color="primary" class="mr-8">
+                    <mat-icon class="material-icons-outlined mr-6">shopping_bag</mat-icon>
+                    <span>ADD CART</span>
+                </button>
+                <button mat-raised-button color="primary">
+                    <mat-icon class="material-icons-outlined mr-6">storefront</mat-icon>
+                    <span>ORDER NOW</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <nav mat-tab-nav-bar color="primary" mat-align-tabs="start" class="mb-24">
+        <a mat-tab-link class="border-tx-12" [routerLink]="['/home/menu', dishId]"
+            [queryParams]="{ contentType: 'overview' }" [active]="contentType === 'overview'">Overview</a>
+        <a mat-tab-link class="border-tx-12" [routerLink]="['/home/menu', dishId]" [queryParams]="{ contentType: 'reviews' }"
+            [active]="contentType === 'reviews'">Reviews</a>
+        <a mat-tab-link class="border-tx-12" [routerLink]="['/home/menu', dishId]" [queryParams]="{ contentType: 'menus' }"
+            [active]="contentType === 'menus'">Menus</a>
+        <a mat-tab-link class="border-tx-12" [routerLink]="['/home/menu', dishId]"
+            [queryParams]="{ contentType: 'ingredients' }" [active]="contentType === 'ingredients'">Ingredients</a>
+    </nav>
+    <div class="d-flex mb-24">
+        <div class="actions-grp mr-40">
+            <div class="actions d-flex flex-col mb-8">
+                <button mat-raised-button class="bg-dark-2 border-8 py-4 text-left mb-8">
+                    <mat-icon class="material-icons-outlined txt-primary mr-6">favorite_border</mat-icon>
+                    <span class="txt-white">LIKE</span>
+                </button>
+                <button mat-raised-button class="bg-dark-2 border-8 py-4 text-left mb-8">
+                    <mat-icon class="material-icons-outlined txt-primary mr-6">bookmark_border</mat-icon>
+                    <span class="txt-white">FAVOURITE</span>
+                </button>
+                <button mat-raised-button class="bg-dark-2 border-8 py-4 text-left mb-8">
+                    <mat-icon class="material-icons-outlined txt-primary mr-6">share</mat-icon>
+                    <span class="txt-white">SHARE</span>
+                </button>
+            </div>
+            <!-- star-rating mat-headline-2 txt-secondary bg-dark-2 d-flex align-items-center border-16 p-12 w-48 -->
+            <!-- <div class="star-rating mat-headline-2">
+            </div> -->
+            <button mat-button color="primary" class="alt-btn px-16 py-8 border-16">
+                <span>4.5</span>
+                <mat-icon class="ml-8">star</mat-icon>
+            </button>
+        </div>
+        <div class="contents">
+            <div class="mat-headline-1 txt-grey mb-4">Description: </div>
+            <div class="mat-headline-2 txt-lighter mb-24">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem officia unde, iste quisquam praesentium, 
+                impedit sapiente ratione, dicta eius error autem dolor veniam asperiores! Sapiente, 
+                nobis! Incidunt eum suscipit debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates porro, 
+                doloribus nulla dolore libero praesentium tempore quidem, illum officia accusantium vitae amet 
+                repudiandae nisi ex alias iure eaque ullam earum!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem officia unde, iste quisquam praesentium, 
+                impedit sapiente ratione, dicta eius error autem dolor veniam asperiores! Sapiente, 
+                nobis! Incidunt eum suscipit debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates porro, 
+                doloribus nulla dolore libero praesentium tempore quidem, illum officia accusantium vitae amet 
+                repudiandae nisi ex alias iure eaque ullam earum!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem officia unde, iste quisquam praesentium, 
+                impedit sapiente ratione, dicta eius error autem dolor veniam asperiores! Sapiente, 
+                nobis! Incidunt eum suscipit debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates porro, 
+                doloribus nulla dolore libero praesentium tempore quidem, illum officia accusantium vitae amet 
+                repudiandae nisi ex alias iure eaque ullam earum!
+            </div>
+            <div class="comment d-flex flex-row p-8">
+                <span>
+                    <div class="mat-headline-1 txt-grey mb-8">Comment your review: </div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Comment</mat-label>
+                        <textarea matInput placeholder="Comment here..."></textarea>
+                    </mat-form-field>
+                </span>
+                <div class="rate-us d-flex flex-col justify-content-start ml-24">
+                    <div class="mat-headline-2 txt-grey ml-6 mb-8">Rate Us</div>
+                      <fieldset class="rating mb-24">
+                          <input type="radio" id="star5" name="rating" (change)="submitRating($event)" value="5" /><label class="full" for="star5"
+                              title="Awesome - 5 stars"></label>
+                          <input type="radio" id="star4half" name="rating" (change)="submitRating($event)" value="4 and a half" /><label class="half"
+                              for="star4half" title="Pretty good - 4.5 stars"></label>
+                          <input type="radio" id="star4" name="rating" (change)="submitRating($event)" value="4" /><label class="full" for="star4"
+                              title="Pretty good - 4 stars"></label>
+                          <input type="radio" id="star3half" name="rating" (change)="submitRating($event)" value="3 and a half" /><label class="half"
+                              for="star3half" title="Meh - 3.5 stars"></label>
+                          <input type="radio" id="star3" name="rating" (change)="submitRating($event)" value="3" /><label class="full" for="star3"
+                              title="Meh - 3 stars"></label>
+                          <input type="radio" id="star2half" name="rating" (change)="submitRating($event)" value="2 and a half" /><label class="half"
+                              for="star2half" title="Kinda bad - 2.5 stars"></label>
+                          <input type="radio" id="star2" name="rating" (change)="submitRating($event)" value="2" /><label class="full" for="star2"
+                              title="Kinda bad - 2 stars"></label>
+                          <input type="radio" id="star1half" name="rating" (change)="submitRating($event)" value="1 and a half" /><label class="half"
+                              for="star1half" title="Meh - 1.5 stars"></label>
+                          <input type="radio" id="star1" name="rating" (change)="submitRating($event)" value="1" /><label class="full" for="star1"
+                              title="Sucks big time - 1 star"></label>
+                          <input type="radio" id="starhalf" name="rating" (change)="submitRating($event)" value="half" /><label class="half" for="starhalf"
+                              title="Sucks big time - 0.5 stars"></label>
+                      </fieldset>
+                      <button mat-raised-button color="primary">SUBMIT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="carousel-grp">
+        <div class="mat-headline mb-24">Today’s treat from us</div>
+        <vr-carousel-list [dishes]="dishes" [dishType]="'view'"></vr-carousel-list>
+      </div>
+    <div class="carousel-grp">
+        <div class="mat-headline mb-24">Today’s treat from us</div>
+        <vr-carousel-list [dishes]="dishes" [dishType]="'view'"></vr-carousel-list>
+      </div>
+    <div class="carousel-grp">
+        <div class="mat-headline mb-24">Today’s treat from us</div>
+        <vr-carousel-list [dishes]="dishes" [dishType]="'view'"></vr-carousel-list>
+      </div>
+</div>

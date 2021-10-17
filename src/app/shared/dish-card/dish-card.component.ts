@@ -17,7 +17,7 @@ export class DishCardComponent implements OnInit {
   }
 
   navigateTo(id: any) {
-    this._router.navigate(['./home', id]);
+    this._router.navigate(['./home/menu', id]);
   }
 
 }

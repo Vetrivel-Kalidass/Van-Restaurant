@@ -11,7 +11,7 @@ export class SidenavComponent implements OnInit {
     {
       label: "Home",
       icon: "restaurant_menu",
-      path: "/home"
+      path: "/home/menu"
     },
     {
       label: "Dine",

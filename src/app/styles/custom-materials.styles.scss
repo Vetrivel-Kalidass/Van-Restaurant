@@ -170,3 +170,23 @@ carousel.banner-carousel {
     border-radius: 16px !important;
   }
 }
+
+/* TABULAR COMPONENT */
+.mat-tab-nav-bar.mat-tab-header {
+  .mat-tab-link {    
+    min-width: 100px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    font-size: 14px !important;
+    line-height: 140% !important;
+    font-weight: 60 !important;
+
+    &.mat-tab-label-active {
+      opacity: 1 !important;
+      color: $primary-text !important;
+    } 
+  }
+  mat-ink-bar.mat-ink-bar {
+    width: 100px !important;
+  }
+}
