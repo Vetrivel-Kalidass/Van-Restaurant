@@ -1,0 +1,11 @@
+.comment {
+  width: 450px;
+
+  > * {
+    width: 100%;
+  }
+  .mat-form-field textarea {
+    max-height: 200px;
+  }
+
+}

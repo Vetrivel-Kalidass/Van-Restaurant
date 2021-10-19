@@ -1,7 +1,8 @@
 .banner-img {
-    width: 100%;
-    height: 505px;
+    width: 400px;
+    height: 400px;
     overflow: hidden;
+    border-radius: 16px 16px 0px 16px;
 
     img {
         width: 100%;
@@ -13,7 +14,7 @@
 .comment {
     mat-form-field {
         width: 550px;
-        
+
         textarea {
             height: 100px;
             max-height: 120px;
