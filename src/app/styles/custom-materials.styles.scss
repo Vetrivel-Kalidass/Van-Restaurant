@@ -32,6 +32,24 @@ button.mat-primary.mat-flat-button *, button.mat-accent.mat-flat-button *, butto
     background-color: $warn-bg !important;
 }
 
+/* MENU BUTTONS */
+button.dropdown-menu {
+  min-width: 150px !important;
+  height: 40px !important;
+  padding: 0px 12px;
+  .mat-button-wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+  }
+}
+.dropdown-menu-panel {
+    margin-top: 5px;
+    .mat-menu-content {
+      min-width: 150px !important;
+    }
+}
+
 /* INPUT */
 mat-form-field.vr-input {
     max-height: 60px !important;
@@ -148,7 +166,7 @@ carousel {
     width: 170px;
     height: 170px;
     overflow: hidden !important;
-    
+
     .mat-headline {
       width: 170px;
       text-align: center;
@@ -173,7 +191,7 @@ carousel.banner-carousel {
 
 /* TABULAR COMPONENT */
 .mat-tab-nav-bar.mat-tab-header {
-  .mat-tab-link {    
+  .mat-tab-link {
     min-width: 100px !important;
     height: 40px !important;
     padding: 0 !important;
@@ -184,7 +202,7 @@ carousel.banner-carousel {
     &.mat-tab-label-active {
       opacity: 1 !important;
       color: $primary-text !important;
-    } 
+    }
   }
   mat-ink-bar.mat-ink-bar {
     width: 100px !important;

@@ -9,6 +9,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { DishDetailsComponent } from './dish-details/dish-details.component';
 import { CommentsComponent } from './comments/comments.component';
 import { DescriptionComponent } from './description/description.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { DescriptionComponent } from './description/description.component';
     MenusComponent,
     DishDetailsComponent,
     CommentsComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    CategoriesComponent
   ],
   imports: [
     CommonModule,

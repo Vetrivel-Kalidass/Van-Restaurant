@@ -12,11 +12,11 @@
         </div>
         <div class="right-section">
             <mat-form-field class="vr-input prefix w-280" appearance="outline">
-                <button mat-icon-button matPrefix>
+                <button mat-icon-button matPrefix (click)="search()">
                   <mat-icon>search</mat-icon>
                 </button>
               <mat-label>Search here</mat-label>
-              <input matInput placeholder="eg: Spicy dish">
+              <input matInput [(ngModel)]="searchValue" (keyup.enter)="search()" placeholder="eg: Spicy dish">
             </mat-form-field>
         </div>
     </mat-toolbar>

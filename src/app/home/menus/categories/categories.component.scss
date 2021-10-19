@@ -1,0 +1,7 @@
+
+.dish-content{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(192px, 195px));
+  grid-gap: 30px;
+}
