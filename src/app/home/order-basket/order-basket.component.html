@@ -1,0 +1,10 @@
+<mat-drawer #drawer class="bg-dark-2 px-24 py-36" mode="side" position="end" opened>
+    <div class="w-450">
+        <div class="mat-headline">ORDER #345</div>
+        <mat-button-toggle-group class="border-8" [(ngModel)]="orderType" aria-label="Choose Order Type">
+          <mat-button-toggle value="dinein">Dine In</mat-button-toggle>
+          <mat-button-toggle value="goto">Go To</mat-button-toggle>
+          <mat-button-toggle value="delivery">D-elivery</mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+</mat-drawer>

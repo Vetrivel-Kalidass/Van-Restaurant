@@ -37,6 +37,7 @@ button.dropdown-menu {
   min-width: 150px !important;
   height: 40px !important;
   padding: 0px 12px;
+  border-radius: 8px !important;
   .mat-button-wrapper {
       display: flex;
       justify-content: flex-start;
@@ -45,9 +46,27 @@ button.dropdown-menu {
 }
 .dropdown-menu-panel {
     margin-top: 5px;
+    border-radius: 12px !important;
     .mat-menu-content {
       min-width: 150px !important;
+      > * {
+        border-radius: 8px !important;
+        color: $vr-light-txt;
+        > span{
+          color: $vr-light-txt;
+        }
+      }
     }
+}
+
+/* BUTTON TOGGLE */
+mat-button-toggle {
+  background-color: transparent !important;
+  transition: all .3s ease;
+}
+mat-button-toggle.mat-button-toggle-checked {
+  background-color: $primary-bg !important;
+  color: $primary-text !important;
 }
 
 /* INPUT */
@@ -86,7 +105,7 @@ mat-form-field.vr-input.prefix .mat-form-field-flex {
 
 
 /* SIDENAV */
-mat-drawer {
+mat-drawer.navigation-sidenav {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
@@ -143,7 +162,7 @@ mat-drawer {
   }
 }
 @media (max-height: 625px) {
-  mat-drawer {
+  mat-drawer.navigation-sidenav {
     border-radius: 0 !important;
   }
 }

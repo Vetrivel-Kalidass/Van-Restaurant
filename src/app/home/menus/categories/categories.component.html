@@ -27,8 +27,8 @@
     </button>
 
     <mat-menu #filterOptions="matMenu" class="bg-dark-2 dropdown-menu-panel">
-      <button *ngFor="let type of orderTypes" (click)="setOrderType(type)" mat-menu-item [ngClass]="{ ' bg-alt-primary': type === orderType }">
-        <span class="{{ type === orderType ? 'txt-primary' : 'txt-white' }}">{{ type.name }}</span>
+      <button *ngFor="let type of orderTypes" (click)="setOrderType(type)" mat-menu-item [ngClass]="{ 'txt-primary bg-alt-primary': type === orderType }">
+        {{ type.name }}
       </button>
     </mat-menu>
 

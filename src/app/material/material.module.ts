@@ -17,6 +17,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatRippleModule} from '@angular/material/core';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 const MaterialComponent = [
   MatCardModule,
@@ -35,7 +36,8 @@ const MaterialComponent = [
   MatListModule,
   MatRippleModule,
   MatTabsModule,
-  MatGridListModule
+  MatGridListModule,
+  MatButtonToggleModule
 ];
 
 @NgModule({
