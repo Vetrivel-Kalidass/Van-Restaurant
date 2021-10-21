@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { CommonService } from 'src/app/core/common.service';
 
 @Component({
   selector: 'vr-order-basket',
@@ -8,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 export class OrderBasketComponent implements OnInit {
 
   orderType: string = 'dinein';
-  constructor() { }
+  isPanelOpened: Observable<boolean> = of(false);
+
+  constructor(
+    private _commonService: CommonService
+   ) { }
 
   ngOnInit(): void {
+    this.isPanelOpened = this._commonService.isOrderBasketOpen;
+  }
+
+  closePanel(): void {
+    this._commonService.setOrderBasketPanelStatus(false);
   }
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CommonService } from 'src/app/core/common.service';
 
 @Component({
   selector: 'vr-sidenav',
@@ -7,42 +9,82 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
-  menuItems = [
+  menuItems: NavigationActions[] = [
     {
       label: "Home",
       icon: "restaurant_menu",
-      path: "/home/menu"
+      path: "/home/menu",
+      type: "link"
     },
     {
       label: "Dine",
       icon: "shopping_bag",
-      path: "/dine"
+      type: "button",
+      onClickEvt: "orderBasket"
     },
     {
       label: "Favourites",
       icon: "bookmark_border",
-      path: "/home/favourites"
+      path: "/home/favourites",
+      type: "link"
     },
     {
       label: "Dashboard",
       icon: "data_usage",
-      path: "/dashboard"
+      path: "/dashboard",
+      type: "link"
     },
     {
       label: "Notifications",
       icon: "notifications",
-      path: "/notifications"
+      type: "button",
+      onClickEvt: "notifications"
     },
     {
       label: "Settings",
       icon: "settings",
-      path: "/settings"
+      path: "/settings",
+      type: "link"
     },
+    {
+      label: "Logout",
+      icon: "logout",
+      type: "button",
+      onClickEvt: "logout"
+    }
   ]
 
-  constructor() { }
+  constructor(
+    private _commonService: CommonService,
+    private _router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
+  navActions(action: 'orderBasket' | 'notifications' | 'logout' | undefined): void {
+    switch (action) {
+      case 'orderBasket':
+        this._commonService.setOrderBasketPanelStatus(true);
+        break;
+      case 'notifications':
+        alert("notifcations");
+        break;
+      case 'logout':
+        this._router.navigate(['/auth']);
+        break;
+
+      default:
+        break;
+    }
+  }
+
+}
+
+export interface NavigationActions {
+  label: string
+  icon: string
+  path?: string
+  type: "button" | "link"
+  onClickEvt?: "orderBasket" | "notifications" | "logout"
 }
