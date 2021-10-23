@@ -5,8 +5,14 @@
 .hp-100 {
     height: 100% !important;
 }
+.w-unset {
+    width: unset !important;
+}
+.h-unset {
+    height: unset !important;
+}
 
-$sizes: 0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 25, 30, 35, 40, 45, 48, 50, 55, 56, 60, 65, 70, 75, 80, 85, 90, 95, 100, 104, 280, 450;
+$sizes: 0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 25, 30, 35, 40, 45, 48, 50, 55, 56, 60, 65, 70, 75, 80, 85, 90, 95, 100, 104, 220, 250, 265, 275, 280, 400, 450;
 
 /* WIDTH, HEIGHT, BORDER RADIUS */
 @each $size in $sizes {
@@ -21,6 +27,18 @@ $sizes: 0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 25, 30, 35, 40
     }
     .h-#{$size} {
         height: #{$size}px !important;
+    }
+    .w-calc-#{$size} {
+        width: calc(100% - #{$size}px) !important;
+    }
+    .h-calc-#{$size} {
+        height: calc(100% - #{$size}px) !important;
+    }
+    .vw-calc-#{$size} {
+        width: calc(100vh - #{$size}px) !important;
+    }
+    .vh-calc-#{$size} {
+        height: calc(100vh - #{$size}px) !important;
     }
     .min-w-#{$size} {
         min-width: #{$size}px !important;
@@ -52,6 +70,21 @@ $sizes: 0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 25, 30, 35, 40
     .border-bx-#{$size} {
         border-bottom-left-radius: #{$size}px !important;
         border-bottom-right-radius: #{$size}px !important;
+    }
+    .top-#{$size} {
+      top: #{$size}px !important;
+    }
+    .bottom-#{$size} {
+      bottom: #{$size}px !important;
+    }
+    .left-#{$size} {
+      left: #{$size}px !important;
+    }
+    .right-#{$size} {
+      right: #{$size}px !important;
+    }
+    .inset-#{$size} {
+      inset: #{$size}px !important;
     }
 }
 
@@ -154,4 +187,34 @@ $sizes: 0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 25, 30, 35, 40
 .hover-bounce.scale-lg:hover {
     -webkit-transform: scale(1.25, 1.25);
     transform: scale(1.25, 1.25);
+}
+
+
+/* others */
+.position-absolute {
+  position: absolute !important;
+}
+.position-fixed {
+  position: fixed !important;
+}
+.position-relative {
+  position: relative !important;
+}
+.overflow-hidden {
+  overflow: hidden !important;
+}
+.overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+.overflow-y-hidden {
+  overflow-y: hidden !important;
+}
+.overflow-auto {
+  overflow: auto !important;
+}
+.overflow-x-auto {
+  overflow-x: auto !important;
+}
+.overflow-y-auto {
+  overflow-y: auto !important;
 }

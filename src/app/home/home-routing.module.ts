@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [
   { 
@@ -8,7 +9,8 @@ const routes: Routes = [
     component: HomeComponent, 
     children: [
       { path: '', loadChildren: () => import('./menus/menus.module').then(m => m.MenusModule) },
-      { path: 'favourites', loadChildren: () => import('./favourites/favourites.module').then(m => m.FavouritesModule) }
+      { path: 'favourites', loadChildren: () => import('./favourites/favourites.module').then(m => m.FavouritesModule) },
+      { path: 'confirm-payment', component: PaymentComponent },
     ] 
   },
 ];

@@ -171,3 +171,20 @@
 .bg-purple {
     background-color: $vr-accent-purple !important;
 }
+
+/* Borders */
+.bordered-left {
+  border-left: $vr-border !important;
+}
+.bordered-right {
+  border-right: $vr-border !important;
+}
+.bordered-top {
+  border-top: $vr-border !important;
+}
+.bordered-bottom {
+  border-bottom: $vr-border !important;
+}
+.bordered {
+  border: $vr-border !important;
+}

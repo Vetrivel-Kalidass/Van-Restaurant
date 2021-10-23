@@ -32,6 +32,33 @@ button.mat-primary.mat-flat-button *, button.mat-accent.mat-flat-button *, butto
     background-color: $warn-bg !important;
 }
 
+.btn-icon.mat-stroked-button {
+  min-width: 100px !important;
+
+  .mat-button-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-top: 8px !important;
+    color: $vr-light-txt !important;
+
+    .check-icon {
+      font-size: 16px;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      visibility: hidden;
+    }
+  }
+}
+.btn-icon.mat-stroked-button.active > .mat-button-wrapper {
+  color: $vr-white !important;
+  .check-icon {
+    color: $primary-text !important;
+    visibility: visible;
+  }
+}
+
 /* MENU BUTTONS */
 button.dropdown-menu {
   min-width: 150px !important;

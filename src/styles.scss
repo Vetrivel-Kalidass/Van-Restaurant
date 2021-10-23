@@ -46,6 +46,7 @@
  $vr-accent-purple: #9290FE;
 
  $vr-btn-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%), 0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%);
+ $vr-border: 1px solid rgba(255, 255, 255, 0.12);
 
 html,
 body {
@@ -65,7 +66,7 @@ body *::-webkit-scrollbar {
   height: 4px !important;
 }
 body *::-webkit-scrollbar-thumb {
-  background: $vr-base-dark-bg1 !important;
+  background: $primary-text !important;
   cursor: pointer;
   border-radius: 0.15625rem;
 }

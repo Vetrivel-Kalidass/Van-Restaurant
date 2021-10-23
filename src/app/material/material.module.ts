@@ -18,6 +18,8 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 
 const MaterialComponent = [
   MatCardModule,
@@ -37,7 +39,9 @@ const MaterialComponent = [
   MatRippleModule,
   MatTabsModule,
   MatGridListModule,
-  MatButtonToggleModule
+  MatButtonToggleModule,
+  MatDatepickerModule,
+  MatNativeDateModule
 ];
 
 @NgModule({
