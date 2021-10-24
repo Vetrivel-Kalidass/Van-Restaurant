@@ -5,7 +5,9 @@
     justify-content: space-between;
 
     > mat-card {
-        min-width: 240px;
+        min-width: 180px;    
+        width: 20%;
+        max-width: 300px !important;
         margin: 0px 16px 16px 0px;
     }
 }

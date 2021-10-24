@@ -1,0 +1,36 @@
+.inner-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    mat-card.options-panel {
+        width: 28%;
+        height: fit-content;
+
+        mat-icon {
+            width: 28px;
+            height: 28px;
+            font-size: 28px;
+        }
+    }
+    mat-card.config-panel {
+        width: 70%;
+        height: fit-content;
+        
+        .config-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 225px));
+            grid-gap: 20px;
+            padding: 24px;
+
+            .add-new-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border: 1px dashed;
+                cursor: pointer;
+            }
+        }
+    }
+}

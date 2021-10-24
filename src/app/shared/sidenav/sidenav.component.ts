@@ -43,7 +43,7 @@ export class SidenavComponent implements OnInit {
     {
       label: "Settings",
       icon: "settings",
-      path: "/settings",
+      path: "/home/settings",
       type: "link"
     },
     {
