@@ -11,6 +11,7 @@ const routes: Routes = [
       { path: '', loadChildren: () => import('./menus/menus.module').then(m => m.MenusModule) },
       { path: 'favourites', loadChildren: () => import('./favourites/favourites.module').then(m => m.FavouritesModule) },
       { path: 'confirm-payment', component: PaymentComponent },
+      { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
     ] 
   },
 ];

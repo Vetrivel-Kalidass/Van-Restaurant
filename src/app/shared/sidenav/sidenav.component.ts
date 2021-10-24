@@ -31,7 +31,7 @@ export class SidenavComponent implements OnInit {
     {
       label: "Dashboard",
       icon: "data_usage",
-      path: "/dashboard",
+      path: "/home/dashboard",
       type: "link"
     },
     {

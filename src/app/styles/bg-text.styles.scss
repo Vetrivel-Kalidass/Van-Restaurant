@@ -85,6 +85,25 @@
     color: $vr-accent-purple !important;
 }
 
+.txt-purple {
+    color: $vr-accent-purple !important;
+}
+.txt-alt-green {
+    color: $vr-alt-accent-green !important;
+}
+.txt-alt-red {
+    color: $vr-alt-accent-red !important;
+}
+.txt-alt-orange {
+    color: $vr-alt-accent-orange !important;
+}
+.txt-alt-blue {
+    color: $vr-alt-accent-blue !important;
+}
+.txt-alt-purple {
+    color: $vr-alt-accent-purple !important;
+}
+
 /***********************************************************************************/
 
 /* BACKGROUNDS */
@@ -168,8 +187,24 @@
 .bg-blue {
     background-color: $vr-accent-blue !important;
 }
+
 .bg-purple {
     background-color: $vr-accent-purple !important;
+}
+.bg-alt-green {
+    background-color: $vr-alt-accent-green !important;
+}
+.bg-alt-red {
+    background-color: $vr-alt-accent-red !important;
+}
+.bg-alt-orange {
+    background-color: $vr-alt-accent-orange !important;
+}
+.bg-alt-blue {
+    background-color: $vr-alt-accent-blue !important;
+}
+.bg-alt-purple {
+    background-color: $vr-alt-accent-purple !important;
 }
 
 /* Borders */
@@ -187,4 +222,13 @@
 }
 .bordered {
   border: $vr-border !important;
+}
+.bordered-none {
+  border: 0 !important;
+}
+.shadow-none {
+    box-shadow: none !important;
+}
+.shadow-md {
+    box-shadow: $vr-btn-shadow !important;
 }

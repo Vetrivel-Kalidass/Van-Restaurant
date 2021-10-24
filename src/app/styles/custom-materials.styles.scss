@@ -297,3 +297,40 @@ carousel.banner-carousel {
 .align-end > .mat-grid-tile-content {
   align-items: flex-end !important;
 }
+
+
+/* MAT TABLE */
+.mat-table {
+  td,
+  th {
+      white-space: pre-wrap !important;
+      text-overflow: ellipsis;
+      overflow: hidden;
+  }
+  td.tiny,
+  th.tiny {
+      flex: 0 0 60px !important;
+      max-width: 60px !important;
+  }
+
+  td.short,
+  th.short {
+      flex: 0 0 75px !important;
+      min-width: 50px !important;
+      max-width: 75px !important;
+  }
+
+  td.medium,
+  th.medium {
+      flex: 0 0 95px !important;
+      min-width: 75px !important;
+      max-width: 95px !important;
+  }
+
+  td.large,
+  th.large {
+      flex: 0 0 200px !important;
+      min-width: 150px !important;
+      max-width: 200px !important;
+  }
+}
