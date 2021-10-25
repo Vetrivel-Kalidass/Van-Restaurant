@@ -1,0 +1,27 @@
+  <mat-drawer #drawer class="navigation-sidenav bg-dark-2 w-104" mode="side" opened>
+
+    <a href="#" class="logo text-dec-none">
+      <img class="w-60 h-60 m-20" src="../../assets/logos/chef-sm.png" alt="VR">
+    </a>
+
+    <mat-nav-list role="navigation" aria-label="Side Menu">
+      <ng-container *ngFor="let i of menuItems">
+        <a
+          *ngIf="i.type === 'link'; else navButton"
+          class="hover-bounce hover-lg"
+          mat-list-item [routerLink]="i.path"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: i.path === '/home' }"
+        >
+          <mat-icon class="material-icons-outlined">{{i.icon}}</mat-icon>
+        </a>
+
+        <ng-template #navButton>
+          <a mat-list-item class="hover-bounce hover-lg" (click)="navActions(i.onClickEvt)">
+            <mat-icon class="material-icons-outlined">{{i.icon}}</mat-icon>
+          </a>
+        </ng-template>
+      </ng-container>
+    </mat-nav-list>
+
+  </mat-drawer>

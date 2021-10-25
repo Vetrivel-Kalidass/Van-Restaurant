@@ -1,0 +1,39 @@
+<nav mat-tab-nav-bar color="primary" mat-align-tabs="start" class="mt-24 mb-36">
+  <a
+    mat-tab-link
+    class="border-tx-12"
+    (click)="resetFilter()"
+    [active]="!category"
+    >All</a
+  >
+  <a
+    mat-tab-link
+    class="border-tx-12"
+    *ngFor="let cat of categories"
+    (click)="filterCategory(cat)"
+    [active]="category?.value === cat.value"
+    >{{ cat.name }}</a
+  >
+</nav>
+
+<div class="main-content px-40">
+  <div class="d-flex justify-content-between">
+    <div class="mat-headline">
+      {{ searchValue ? "Search for " + searchValue : "Choose Dishes" }}
+    </div>
+    <button mat-stroked-button [matMenuTriggerFor]="filterOptions" class="dropdown-menu bg-dark-2">
+      <mat-icon class="mr-8">expand_more</mat-icon>
+      <span>{{ orderType.name }}</span>
+    </button>
+
+    <mat-menu #filterOptions="matMenu" class="bg-dark-2 dropdown-menu-panel">
+      <button *ngFor="let type of orderTypes" (click)="setOrderType(type)" mat-menu-item [ngClass]="{ 'txt-primary bg-alt-primary': type === orderType }">
+        {{ type.name }}
+      </button>
+    </mat-menu>
+
+  </div>
+  <div class="dish-content mt-24">
+    <vr-dish-card *ngFor="let dish of dishes" [dish]="dish"></vr-dish-card>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<mat-drawer-container class="bg-transparent wp-100 hp-100">
+
+  <vr-sidenav></vr-sidenav>
+
+  <div class="container">
+    <mat-toolbar class="d-flex flex-row justify-content-between bg-transparent p-0 mb-12">
+        <div class="left-section">
+            <a href="#" class="logo text-dec-none">
+                    <div class="mat-display-1 txt-white mb-0">Vanan Restaurant</div>
+                    <div class="mat-title txt-lighter mb-0">food makes life healthy</div>
+            </a>
+        </div>
+        <div class="right-section">
+            <mat-form-field class="vr-input prefix w-280" appearance="outline">
+                <button mat-icon-button matPrefix (click)="search()">
+                  <mat-icon>search</mat-icon>
+                </button>
+              <mat-label>Search here</mat-label>
+              <input matInput [(ngModel)]="searchValue" (keyup.enter)="search()" placeholder="eg: Spicy dish">
+            </mat-form-field>
+        </div>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+
+    <vr-order-basket></vr-order-basket>
+  </div>
+
+</mat-drawer-container>

@@ -1,0 +1,101 @@
+<mat-drawer #drawer id="orderBasket" class="bg-dark-2 p-24" mode="side" position="end" [opened]="isPanelOpened | async">
+  <div class="w-450">
+    <div class="mat-headline">ORDER #345</div>
+    <mat-button-toggle-group class="border-8 mb-24" [(ngModel)]="orderType" aria-label="Choose Order Type">
+      <mat-button-toggle value="dinein">Dine In</mat-button-toggle>
+      <mat-button-toggle value="goto">Go To</mat-button-toggle>
+      <mat-button-toggle value="delivery">Delivery</mat-button-toggle>
+    </mat-button-toggle-group>
+
+    <div class="order-table">
+      <div class="table-header mb-8">
+        <mat-grid-list cols="5" rowHeight="40px">
+          <mat-grid-tile class="justify-left" colspan="3">
+            <div class="mat-title">Item</div>
+          </mat-grid-tile>
+          <mat-grid-tile class="justify-right" colspan="1">
+            <div class="mat-title mr-16">Qty</div>
+          </mat-grid-tile>
+          <mat-grid-tile colspan="1">
+            <div class="mat-title">Price</div>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <mat-divider></mat-divider>
+      </div>
+      <div class="table-content">
+        <mat-grid-list class="mb-16" cols="5" rowHeight="65px">
+          <mat-grid-tile colspan="3" class="justify-left">
+            <img class="w-48 h-48 border-25 mr-8" src="../../../assets/images/bg-1.png" alt="comment-img">
+            <div class="d-flex flex-col">
+              <div class="mat-title mb-2">Spicy seasoned sea...</div>
+              <div class="mat-heading-2 txt-grey">$ 299</div>
+            </div>
+          </mat-grid-tile>
+          <mat-grid-tile colspan="1" class="justify-right">
+            <mat-form-field class="vr-input w-55" appearance="outline">
+              <input matInput class="hide-ctrls" type="number" placeholder="10">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile colspan="1" class="align-center">
+            <div class="mat-title">$ 299</div>
+          </mat-grid-tile>
+
+          <mat-grid-tile colspan="4">
+            <mat-form-field class="vr-input wp-100" appearance="outline">
+              <input matInput placeholder="Please, just a little bit spicy only.">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile colspan="1">
+            <button mat-stroked-button color="primary" class="min-w-56 h-56 p-0 border-12">
+              <mat-icon class="material-icons-outlined">delete</mat-icon>
+            </button>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list class="mb-16" cols="5" rowHeight="65px">
+          <mat-grid-tile colspan="3" class="justify-left">
+            <img class="w-48 h-48 border-25 mr-8" src="../../../assets/images/bg-1.png" alt="comment-img">
+            <div class="d-flex flex-col">
+              <div class="mat-title mb-2">Spicy seasoned sea...</div>
+              <div class="mat-heading-2 txt-grey">$ 299</div>
+            </div>
+          </mat-grid-tile>
+          <mat-grid-tile colspan="1" class="justify-right">
+            <mat-form-field class="vr-input w-55" appearance="outline">
+              <input matInput class="hide-ctrls" type="number" placeholder="10">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile colspan="1" class="align-center">
+            <div class="mat-title">$ 299</div>
+          </mat-grid-tile>
+
+          <mat-grid-tile colspan="4">
+            <mat-form-field class="vr-input wp-100" appearance="outline">
+              <input matInput placeholder="Please, just a little bit spicy only.">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile colspan="1">
+            <button mat-stroked-button color="primary" class="min-w-56 h-56 p-0 border-12">
+              <mat-icon class="material-icons-outlined">delete</mat-icon>
+            </button>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+      <div class="table-actions">
+        <mat-divider class="mb-16"></mat-divider>
+        <div class="d-flex justify-content-between mb-8">
+          <div class="mat-heading-1 txt-grey mb-0">Discount</div>
+          <div class="mat-title mb-0">$299</div>
+        </div>
+        <div class="d-flex justify-content-between mb-16">
+          <div class="mat-heading-1 txt-grey mb-0">Sub Total</div>
+          <div class="mat-title mb-0">$2,999</div>
+        </div>
+        <div class="d-flex justify-content-end">
+          <button mat-button color="primary" class="mr-8" (click)="closePanel()">CANCEL</button>
+          <button mat-raised-button color="primary">CONTINUE</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</mat-drawer>

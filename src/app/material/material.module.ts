@@ -11,7 +11,19 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDividerModule} from '@angular/material/divider';
-
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatRippleModule} from '@angular/material/core';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatChipsModule} from '@angular/material/chips';
 
 const MaterialComponent = [
   MatCardModule,
@@ -24,7 +36,20 @@ const MaterialComponent = [
   MatProgressSpinnerModule,
   MatSelectModule,
   MatSnackBarModule,
-  MatDividerModule
+  MatDividerModule,
+  MatToolbarModule,
+  MatSidenavModule,
+  MatListModule,
+  MatRippleModule,
+  MatTabsModule,
+  MatGridListModule,
+  MatButtonToggleModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatTooltipModule,
+  MatChipsModule
 ];
 
 @NgModule({

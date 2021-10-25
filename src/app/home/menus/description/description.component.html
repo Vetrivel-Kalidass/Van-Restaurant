@@ -1,0 +1,29 @@
+<div class="mat-headline-1 txt-grey mb-8">Description:</div>
+<div class="mat-headline-2 txt-lighter mb-24">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+  officia unde, iste quisquam praesentium, impedit sapiente ratione, dicta eius
+  error autem dolor veniam asperiores! Sapiente, nobis! Incidunt eum suscipit
+  debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+  porro, doloribus nulla dolore libero praesentium tempore quidem, illum officia
+  accusantium vitae amet repudiandae nisi ex alias iure eaque ullam earum! Lorem
+  ipsum dolor sit amet consectetur adipisicing elit. Exercitationem officia
+  unde, iste quisquam praesentium, impedit sapiente ratione, dicta eius error
+  autem dolor veniam asperiores! Sapiente, nobis! Incidunt eum suscipit debitis.
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates porro,
+  doloribus nulla dolore libero praesentium tempore quidem, illum officia
+  accusantium vitae amet repudiandae nisi ex alias iure eaque ullam earum! Lorem
+  ipsum dolor sit amet consectetur adipisicing elit. Exercitationem officia
+  unde, iste quisquam praesentium, impedit sapiente ratione.
+</div>
+<div class="comment p-8">
+  <div class="mat-headline-1 txt-grey mb-8">Comment your review:</div>
+  <mat-form-field appearance="outline">
+    <mat-label>Comment</mat-label>
+    <textarea matInput placeholder="Comment here..."></textarea>
+  </mat-form-field>
+  <div class="mat-headline-2 txt-grey ml-6 mb-8">Rate Us</div>
+  <div class="rate-us d-flex flex-row justify-content-between">
+    <vr-star-rating (rating)="submitRating($event)"></vr-star-rating>
+    <button mat-raised-button color="primary">SUBMIT</button>
+  </div>
+</div>

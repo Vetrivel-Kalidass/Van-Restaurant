@@ -1,0 +1,129 @@
+<div *ngIf="dishId.length" class="main-content">
+  <div class="d-flex mt-24">
+    <div class="d-flex flex-col align-items-end mr-20">
+      <div class="banner-img bg-dark-2 p-20">
+        <img src="../../../../assets/images/bg-1.png" alt="" />
+      </div>
+      <div
+        class="
+          actions
+          bg-dark-2
+          px-16
+          pb-4
+          border-bx-25
+          w-200
+          d-flex
+          flex-row
+          align-items-center
+          mb-8
+        "
+      >
+        <span class="d-flex txt-light align-items-center mr-8">
+          <span>4.5</span>
+          <mat-icon class="ml-6">star</mat-icon>
+        </span>
+        <button mat-icon-button class="mr-4">
+          <mat-icon class="material-icons-outlined txt-primary mr-6"
+            >favorite_border</mat-icon
+          >
+        </button>
+        <button mat-icon-button class="mr-4">
+          <mat-icon class="material-icons-outlined txt-primary mr-6"
+            >bookmark_border</mat-icon
+          >
+        </button>
+        <button mat-icon-button>
+          <mat-icon class="material-icons-outlined txt-primary mr-6"
+            >share</mat-icon
+          >
+        </button>
+      </div>
+    </div>
+    <div class="container wp-100">
+      <div class="d-flex justify-content-between mb-8">
+        <div class="left-section">
+          <div class="mat-display-4 mb-0">Spicy seasoned seafood noodles</div>
+          <div class="mat-subheading-1 txt-grey mb-4">
+            consumer’s all time favorite.
+          </div>
+          <div class="mat-subheading-2">11 AM - 2PM Onwards</div>
+        </div>
+        <div class="right-section">
+          <span class="d-flex justify-content-end mb-8">
+            <div class="mat-subheading-1 txt-grey mb-0 mt-16 mr-4">Price</div>
+            <div class="mat-display-4 mb-0">$ 299 - 20% Off</div>
+          </span>
+          <div class="d-flex">
+            <button mat-button color="primary" class="mr-8">
+              <mat-icon class="material-icons-outlined mr-6"
+                >shopping_bag</mat-icon
+              >
+              <span>ADD CART</span>
+            </button>
+            <button mat-raised-button color="primary">
+              <mat-icon class="material-icons-outlined mr-6"
+                >storefront</mat-icon
+              >
+              <span>ORDER NOW</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <nav mat-tab-nav-bar color="primary" mat-align-tabs="start" class="mb-24">
+        <a
+          mat-tab-link
+          class="border-tx-12"
+          [routerLink]="['/home/menu', dishId]"
+          [queryParams]="{ contentType: 'overview' }"
+          [active]="contentType === 'overview'"
+          >Overview</a
+        >
+        <a
+          mat-tab-link
+          class="border-tx-12"
+          [routerLink]="['/home/menu', dishId]"
+          [queryParams]="{ contentType: 'reviews' }"
+          [active]="contentType === 'reviews'"
+          >Reviews</a
+        >
+        <a
+          mat-tab-link
+          class="border-tx-12"
+          [routerLink]="['/home/menu', dishId]"
+          [queryParams]="{ contentType: 'menus' }"
+          [active]="contentType === 'menus'"
+          >Menus</a
+        >
+        <a
+          mat-tab-link
+          class="border-tx-12"
+          [routerLink]="['/home/menu', dishId]"
+          [queryParams]="{ contentType: 'ingredients' }"
+          [active]="contentType === 'ingredients'"
+          >Ingredients</a
+        >
+      </nav>
+      <div class="d-flex mb-24">
+        <div class="contents px-20 wp-100">
+          <ng-containter [ngSwitch]="contentType">
+            <vr-description *ngSwitchCase="'overview'"></vr-description>
+            <vr-comments *ngSwitchCase="'reviews'"></vr-comments>
+            <vr-description *ngSwitchDefault></vr-description>
+          </ng-containter>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-grp">
+    <div class="mat-headline mb-24">Today’s treat from us</div>
+    <vr-carousel-list [dishes]="dishes" [dishType]="'view'"></vr-carousel-list>
+  </div>
+  <div class="carousel-grp">
+    <div class="mat-headline mb-24">Today’s treat from us</div>
+    <vr-carousel-list [dishes]="dishes" [dishType]="'view'"></vr-carousel-list>
+  </div>
+  <div class="carousel-grp">
+    <div class="mat-headline mb-24">Today’s treat from us</div>
+    <vr-carousel-list [dishes]="dishes" [dishType]="'view'"></vr-carousel-list>
+  </div>
+</div>

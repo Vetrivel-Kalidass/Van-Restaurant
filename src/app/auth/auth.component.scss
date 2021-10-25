@@ -1,0 +1,31 @@
+mat-card {
+    width: 650px;
+    min-height: 500px;
+    background: url(../../assets/images/bg-1.png) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+
+    form {
+        width: 80% !important;
+        margin: 0px auto !important;
+    }
+}
+
+@media (max-width: 700px) {
+    mat-card > span {
+        position: fixed;
+        inset: 0;
+    }
+    form {
+        min-width: 100% !important;
+        height: 100% !important;
+
+        .form-actions {
+            position: fixed;
+            left: 24px;
+            right: 24px;
+            bottom: 24px;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.box-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+
+    > mat-card {
+        min-width: 180px;    
+        width: 20%;
+        max-width: 300px !important;
+        margin: 0px 16px 16px 0px;
+    }
+}
+
+.table-section, .visualize-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    mat-card.table-wrap {
+        width: 70%;
+    }
+    mat-card.list-wrap {
+        width: 28%;
+        height: fit-content;
+    }
+}

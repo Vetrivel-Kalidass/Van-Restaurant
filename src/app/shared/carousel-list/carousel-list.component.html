@@ -1,0 +1,19 @@
+<carousel 
+        *ngIf="dishes.length"
+        class="mb-40"
+        [height]="carouselConfig.height"
+        [cellWidth]="'100%'"
+        [pauseOnHover]="carouselConfig.pauseOnHover"
+        [arrows]="carouselConfig.arrows"
+        [arrowsTheme]="'dark'"
+        [autoplay]="carouselConfig.autoplay"
+        [dots]="carouselConfig.dots"
+        [loop]="carouselConfig.loop"
+        [cellsToShow]="carouselConfig.cellsToShow"
+    >
+    <div *ngFor="let dish of dishes" class="carousel-cell">
+
+        <vr-dish-card [dish]="dish" [dishType]="dishType"></vr-dish-card>
+
+</div>
+    </carousel>

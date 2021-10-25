@@ -1,0 +1,218 @@
+<mat-card class="bg-transparent bordered border-16 p-0">
+  <div class="left-content w-450 bordered-right">
+    <div class="d-flex justify-content-between mb-16">
+      <div class="d-flex flex-col">
+        <div class="mat-headline mb-4">Confirmation</div>
+        <div class="mat-heading-2 txt-grey mb-0">Order #345</div>
+      </div>
+      <button mat-fab color="primary" class="border-8 mr-16">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+
+    <mat-divider class="w-unset left-24 right-24"></mat-divider>
+
+    <div
+      class="table-content vh-calc-275 overflow-x-hidden overflow-y-auto pt-8"
+    >
+      <mat-grid-list class="mb-16" cols="5" rowHeight="65px">
+        <mat-grid-tile colspan="3" class="justify-left">
+          <img
+            class="w-48 h-48 border-25 mr-8"
+            src="../../../assets/images/bg-1.png"
+            alt="comment-img"
+          />
+          <div class="d-flex flex-col">
+            <div class="mat-title mb-2">Spicy seasoned sea...</div>
+            <div class="mat-heading-2 txt-grey">$ 299</div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" class="justify-right">
+          <mat-form-field class="vr-input w-55" appearance="outline">
+            <input matInput class="hide-ctrls" type="number" placeholder="10" />
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" class="align-center">
+          <div class="mat-title">$ 299</div>
+        </mat-grid-tile>
+
+        <mat-grid-tile colspan="4">
+          <mat-form-field class="vr-input wp-100" appearance="outline">
+            <input
+              matInput
+              placeholder="Please, just a little bit spicy only."
+            />
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1">
+          <button
+            mat-stroked-button
+            color="primary"
+            class="min-w-56 h-56 p-0 border-12"
+          >
+            <mat-icon class="material-icons-outlined">delete</mat-icon>
+          </button>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <mat-grid-list class="mb-16" cols="5" rowHeight="65px">
+        <mat-grid-tile colspan="3" class="justify-left">
+          <img
+            class="w-48 h-48 border-25 mr-8"
+            src="../../../assets/images/bg-1.png"
+            alt="comment-img"
+          />
+          <div class="d-flex flex-col">
+            <div class="mat-title mb-2">Spicy seasoned sea...</div>
+            <div class="mat-heading-2 txt-grey">$ 299</div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" class="justify-right">
+          <mat-form-field class="vr-input w-55" appearance="outline">
+            <input matInput class="hide-ctrls" type="number" placeholder="10" />
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" class="align-center">
+          <div class="mat-title">$ 299</div>
+        </mat-grid-tile>
+
+        <mat-grid-tile colspan="4">
+          <mat-form-field class="vr-input wp-100" appearance="outline">
+            <input
+              matInput
+              placeholder="Please, just a little bit spicy only."
+            />
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1">
+          <button
+            mat-stroked-button
+            color="primary"
+            class="min-w-56 h-56 p-0 border-12"
+          >
+            <mat-icon class="material-icons-outlined">delete</mat-icon>
+          </button>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+
+    <mat-divider class="position-relative mb-12"></mat-divider>
+
+    <div class="table-actions">
+      <div class="d-flex justify-content-between mb-8 mr-28">
+        <div class="mat-heading-1 txt-grey mb-0">Discount</div>
+        <div class="mat-title mb-0">$299</div>
+      </div>
+      <div class="d-flex justify-content-between mb-16 mr-28">
+        <div class="mat-heading-1 txt-grey mb-0">Sub Total</div>
+        <div class="mat-title mb-0">$2,999</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="right-content w-calc-450">
+    <div class="mb-16">
+      <div class="mat-headline mb-4">Payment</div>
+      <div class="mat-heading-2 txt-grey mb-0">3 payment method available</div>
+    </div>
+
+    <form class="d-flex flex-col justify-content-between h-calc-100 pt-24">
+      <span>
+        <div class="form-control">
+          <div class="mat-heading-1 mb-12">Payment Method</div>
+          <div class="d-flex flex-row">
+            <button
+              mat-stroked-button
+              class="btn-icon border-16 mr-8"
+              [ngClass]="{ active: payType === 'cc' }"
+              (click)="choosePayType('cc')"
+            >
+              <mat-icon class="material-icons-outlined">credit_card</mat-icon>
+              <mat-icon class="check-icon">check_circle</mat-icon>
+              <span>Credit Card</span>
+            </button>
+            <button
+              mat-stroked-button
+              class="btn-icon border-16 mr-8"
+              [ngClass]="{ active: payType === 'upi' }"
+              (click)="choosePayType('upi')"
+            >
+              <mat-icon class="material-icons-outlined"
+                >account_balance_wallet</mat-icon
+              >
+              <mat-icon class="check-icon">check_circle</mat-icon>
+              <span>UPI</span>
+            </button>
+            <button
+              mat-stroked-button
+              class="btn-icon border-16 mr-8"
+              [ngClass]="{ active: payType === 'cod' }"
+              (click)="choosePayType('cod')"
+            >
+              <mat-icon class="material-icons-outlined">store</mat-icon>
+              <mat-icon class="check-icon">check_circle</mat-icon>
+              <span>COD</span>
+            </button>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-control">
+            <mat-form-field class="vr-input" appearance="outline">
+              <mat-label>Cardholder Name</mat-label>
+              <input matInput placeholder="eg: Levi Ackerman" />
+            </mat-form-field>
+          </div>
+          <div class="form-control">
+            <mat-form-field class="vr-input" appearance="outline">
+              <mat-label>Card Number</mat-label>
+              <input matInput placeholder="eg: 2564 1421 0897 1244" />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-control">
+            <mat-form-field class="vr-input" appearance="outline">
+              <mat-label>Expiration Date</mat-label>
+              <input matInput (click)="picker.open()" [matDatepicker]="picker" />
+              <mat-datepicker-toggle matSuffix [for]="picker">
+                <!-- <mat-icon matDatepickerToggleIcon>arrow_drop_down</mat-icon> -->
+              </mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            </div>
+            <div class="form-control">
+              <mat-form-field class="vr-input" appearance="outline">
+                <mat-label>CVV</mat-label>
+                <input matInput type="password" />
+              </mat-form-field>
+          </div>
+        </div>
+        <mat-divider class="position-relative mb-16"></mat-divider>
+        <div class="mat-headling-1 mb-12">Order Type</div>
+        <div class="form-group">
+          <div class="form-control">
+            <button mat-stroked-button [matMenuTriggerFor]="filterOptions" class="dropdown-menu min-h-56 bg-dark-2">
+              <mat-icon class="mr-8">expand_more</mat-icon>
+              <span>{{ orderType.name }}</span>
+            </button>
+
+            <mat-menu #filterOptions="matMenu" class="bg-dark-2 dropdown-menu-panel w-250">
+              <button *ngFor="let type of orderTypes" (click)="setOrderType(type)" mat-menu-item [ngClass]="{ 'txt-primary bg-alt-primary': type === orderType }">
+                {{ type.name }}
+              </button>
+            </mat-menu>
+            </div>
+            <div class="form-control">
+              <mat-form-field class="vr-input" appearance="outline">
+                <mat-label>Table no.</mat-label>
+                <input matInput type="number" />
+              </mat-form-field>
+          </div>
+        </div>
+      </span>
+      <div class="form-group justify-content-end">
+          <button mat-stroked-button color="primary" class="mr-8">CANCEL</button>
+          <button mat-raised-button color="primary">CONTINUE</button>
+      </div>
+    </form>
+  </div>
+</mat-card>

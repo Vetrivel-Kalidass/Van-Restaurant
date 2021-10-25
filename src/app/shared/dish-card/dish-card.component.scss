@@ -1,0 +1,61 @@
+@import '../../../styles.scss';
+
+.card-wrapper {
+    width: 192px;
+    height: 260px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 16px;
+    cursor: pointer;
+    
+    mat-card {
+        height: 226px !important;
+        width: 100% !important;
+        border-radius: 16px !important;
+
+        img {
+            width: 132px;
+            height: 132px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: -34px;
+            left: 28px;
+        }
+        .bottom-section {
+            width: 144px;
+            height: 88px;
+            margin: 114px auto 24px auto;
+            text-align: center;
+        }
+    }
+}
+.card-wrapper.edit-card {
+    width: 221px;
+    height: 299px;
+    border-radius: 8px !important;
+
+    mat-card {
+        height: 100% !important;
+        border-radius: 8px !important;
+
+        img {
+            width: 127px;
+            height: 127px;
+            top: 24px;
+            left: 47px;
+        }
+        .bottom-section {
+            margin: 167px auto 68px auto !important;
+        }
+
+        button {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100% !important;
+            height: 52px !important;
+        }
+    }
+}
