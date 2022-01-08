@@ -1,31 +1,24 @@
 mat-card {
-    width: 650px;
+    min-width: 350px;
     min-height: 500px;
-    background: url(../../assets/images/bg-1.png) !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: center !important;
-
-    form {
-        width: 80% !important;
-        margin: 0px auto !important;
+    padding: 24px;
+    border-radius: 16px !important;
+  }
+  
+  @media (min-width: 481px) and (max-width: 768px) {
+    mat-card {
+      padding: 16px;
     }
-}
-
-@media (max-width: 700px) {
-    mat-card > span {
-        position: fixed;
-        inset: 0;
+  }
+  
+  @media (max-width: 480px) {
+    mat-card {
+        width: 100%;
+        height: calc(100vh - 36px);
+        min-width: 200px;
+        padding: 16px;
+        border-radius: 0 !important;
+        overflow-y: auto;
     }
-    form {
-        min-width: 100% !important;
-        height: 100% !important;
-
-        .form-actions {
-            position: fixed;
-            left: 24px;
-            right: 24px;
-            bottom: 24px;
-        }
-    }
-}
+  }
+  
