@@ -24,6 +24,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 
 const MaterialComponent = [
   MatCardModule,
@@ -49,7 +50,8 @@ const MaterialComponent = [
   MatTableModule,
   MatPaginatorModule,
   MatTooltipModule,
-  MatChipsModule
+  MatChipsModule,
+  MatBottomSheetModule
 ];
 
 @NgModule({

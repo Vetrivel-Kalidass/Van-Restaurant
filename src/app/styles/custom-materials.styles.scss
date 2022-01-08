@@ -248,6 +248,12 @@ mat-drawer#orderBasket {
   }
 }
 
+/* MAT LIST */
+.notification-list {
+    background: $vr-base-dark-bg1 !important;
+    padding: 0px !important;
+}
+
 /* CAROUSEL COMPONENT */
 carousel {
   .carousel-container, .carousel-cell > img {
