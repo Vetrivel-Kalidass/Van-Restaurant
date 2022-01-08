@@ -1,0 +1,39 @@
+form {
+    
+    .d-flex {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .d-flex > mat-form-field {
+        width: 220px !important;
+    }
+}
+@media (min-width: 481px)  {
+    .form-actions.d-flex {
+        flex-direction: row-reverse !important;
+        justify-content: flex-start !important;
+        align-items: center;
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+        right: 24px;
+    }
+}
+  
+  @media (max-width: 480px) {
+    form {
+        min-width: 100%;
+    
+        .d-flex {
+            flex-direction: column !important;
+            
+            mat-form-field {
+                width: 100% !important;
+            }
+        }
+
+    }
+  }
+  

@@ -1,0 +1,35 @@
+<form [formGroup]="signupForm" (ngSubmit)="submitForm()" class="d-flex flex-col">
+
+    <mat-form-field appearance="outline" color="primary">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="Eg: eren@southindus.com">
+        <mat-error>{{ formErrors?.email }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" color="primary">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" [type]="pwdHide ? 'password' : 'text'" placeholder="Eg: Eren@101">
+        <button mat-icon-button matSuffix (click)="pwdHide = !pwdHide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="pwdHide">
+            <mat-icon>{{pwdHide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error>{{ formErrors?.password }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" color="primary">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput formControlName="confirm" [type]="confirmHide ? 'password' : 'text'" placeholder="Eg: Eren@101">
+        <button mat-icon-button matSuffix (click)="confirmHide = !confirmHide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="confirmHide">
+            <mat-icon>{{confirmHide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error>{{ formErrors?.confirm }}</mat-error>
+        <!-- <mat-error *ngIf="formControls.confirm.hasError('matchPassword')">{{ validationMessages.PASSWORD.MATCH }}</mat-error> -->
+    </mat-form-field>
+
+    <div class="form-actions d-flex">
+        <button mat-raised-button color="primary" class="my-8" type="submit">Register</button>
+        <a mat-button color="accent" routerLink="/auth/signin">Already have
+            account</a>
+    </div>
+</form>

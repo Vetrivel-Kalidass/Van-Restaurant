@@ -1,33 +1,12 @@
 <div class="vw-100 vh-100 d-flex justify-content-center align-items-center">
-    <mat-card class="bg-dark-2 border-16 d-flex p-0">
-        <span class="d-flex flex-col bg-dark-2 border-ly-14 p-24">
-            <a href="#" class="logo d-flex flex-row text-dec-none mb-40">
-                <img class="w-60 h-60" src="../../assets/logos/chef-sm.png" alt="VR">
-                <span class="ml-8">
-                    <div class="mat-display-1 txt-white mb-0">Vanan Restaurant</div>
-                    <div class="mat-title txt-lighter mb-0">food makes life healthy</div>
-                </span>
-            </a>
-            
-            <form #signinForm="ngForm" class="d-flex flex-col">
-                <mat-form-field appearance="outline">
-                  <mat-label>Username</mat-label>
-                  <input matInput placeholder="Placeholder">
-                </mat-form-field>
-
-                <mat-form-field appearance="outline">
-                  <mat-label>Password</mat-label>
-                  <input matInput [type]="pwdHide ? 'password' : 'text'">
-                  <button mat-icon-button matSuffix (click)="pwdHide = !pwdHide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="pwdHide">
-                    <mat-icon>{{pwdHide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                  </button>
-                </mat-form-field>
-
-                <div class="form-actions d-flex flex-col mt-32">
-                  <button mat-raised-button color="primary" class="mb-8">Login</button>
-                  <button mat-button color="accent">Create new account</button>
-                </div>
-            </form>
-        </span>
-    </mat-card>
+  <mat-card class="d-flex flex-col bg-dark-2 border-16">
+      <a href="#" class="logo d-flex flex-row text-dec-none mb-40">
+          <img class="w-60 h-60" src="../../assets/logos/chef-sm.png" alt="VR">
+          <span class="ml-8">
+              <div class="mat-display-1 txt-white mb-0">Vanan Restaurant</div>
+              <div class="mat-title txt-lighter mb-0">food makes life healthy</div>
+          </span>
+      </a>
+      <router-outlet></router-outlet>
+  </mat-card>
 </div>

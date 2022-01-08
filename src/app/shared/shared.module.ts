@@ -7,6 +7,7 @@ import { CarouselListComponent } from './carousel-list/carousel-list.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { DishCardComponent } from './dish-card/dish-card.component';
 import { StarRatingComponent } from './star-rating/star-rating.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 
 
 
@@ -15,7 +16,8 @@ import { StarRatingComponent } from './star-rating/star-rating.component';
     SidenavComponent,
     CarouselListComponent,
     DishCardComponent,
-    StarRatingComponent
+    StarRatingComponent,
+    NotificationsComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,8 @@ import { StarRatingComponent } from './star-rating/star-rating.component';
     SidenavComponent,
     CarouselListComponent,
     DishCardComponent,
-    StarRatingComponent
+    StarRatingComponent,
+    NotificationsComponent
   ]
 })
 export class SharedModule { }

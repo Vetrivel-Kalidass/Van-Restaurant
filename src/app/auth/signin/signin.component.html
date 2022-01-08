@@ -1,0 +1,23 @@
+<form [formGroup]="signinForm" (ngSubmit)="submitForm()" class="d-flex flex-col">
+    <mat-form-field appearance="outline" color="primary">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="Eg: eren@southindus.com">
+        <mat-error>{{ formErrors?.email }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" color="primary">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" [type]="pwdHide ? 'password' : 'text'" placeholder="Eg: Eren@101">
+        <button mat-icon-button matSuffix (click)="pwdHide = !pwdHide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="pwdHide">
+            <mat-icon>{{pwdHide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error>{{ formErrors?.password }}</mat-error>
+    </mat-form-field>
+
+    <div class="form-actions d-flex flex-col position-absolute bottom-24 left-24 right-24">
+        <button mat-raised-button color="primary" class="mt-32 mb-8" [disabled]="signinForm.invalid" type="submit">Login</button>
+        <a mat-button color="accent" routerLink="/auth/signup">Create new
+            account</a>
+    </div>
+</form>

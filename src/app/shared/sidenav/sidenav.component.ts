@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { Router } from '@angular/router';
 import { CommonService } from 'src/app/core/common.service';
+import { NotificationsComponent } from '../notifications/notifications.component';
 
 @Component({
   selector: 'vr-sidenav',
@@ -56,8 +58,13 @@ export class SidenavComponent implements OnInit {
 
   constructor(
     private _commonService: CommonService,
+    private _bottomSheet: MatBottomSheet,
     private _router: Router
-  ) { }
+  ) {}
+
+  openNotification(): void {
+    this._bottomSheet.open(NotificationsComponent, { panelClass: 'notification-list' });
+  }
 
   ngOnInit(): void {
   }
@@ -68,7 +75,7 @@ export class SidenavComponent implements OnInit {
         this._commonService.setOrderBasketPanelStatus(true);
         break;
       case 'notifications':
-        alert("notifcations");
+        this.openNotification();
         break;
       case 'logout':
         this._router.navigate(['/auth']);
